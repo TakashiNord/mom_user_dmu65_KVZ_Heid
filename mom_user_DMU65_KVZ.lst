@@ -1,0 +1,2679 @@
+.text:10001000 ;
+.text:10001000 ;
+.text:10001000 ; Input MD5   : 27A607D0531D2FA05F280D744894D6F4
+.text:10001000 ; Input CRC32 : 8422479E
+.text:10001000
+.text:10001000 ; File Name   : C:\Users\Tanuki\Desktop\mom_user_DMU65_KVZ.dll
+.text:10001000 ; Format	     : Portable	executable for 80386 (PE)
+.text:10001000 ; Imagebase   : 10000000
+.text:10001000 ; Section 1. (virtual address 00001000)
+.text:10001000 ; Virtual size		       : 00000E2E (   3630.)
+.text:10001000 ; Section size in file	       : 00001000 (   4096.)
+.text:10001000 ; Offset	to raw data for	section: 00001000
+.text:10001000 ; Flags 60000020: Text Executable Readable
+.text:10001000 ; Alignment     : default
+.text:10001000 ; Exported entry	  1. NXSigningResource
+.text:10001000 ; OS type	 :  MS Windows
+.text:10001000 ; Application type:  DLL	32bit
+.text:10001000
+.text:10001000 .686p
+.text:10001000 .mmx
+.text:10001000 .model flat
+.text:10001000
+.text:10001000
+.text:10001000 ; Segment type: Pure code
+.text:10001000 ; Segment permissions: Read/Execute
+.text:10001000 _text segment para public 'CODE' use32
+.text:10001000 assume cs:_text
+.text:10001000 ;org 10001000h
+.text:10001000 assume es:nothing, ss:nothing, ds:_data,	fs:nothing, gs:nothing
+.text:10001000
+.text:10001000
+.text:10001000
+.text:10001000 public NXSigningResource
+.text:10001000 NXSigningResource proc near
+.text:10001000 retn
+.text:10001000 NXSigningResource endp
+.text:10001000
+.text:10001001 align 10h
+.text:10001010 ; Exported entry	  2. entry_rtv_mom_cp_part_attr
+.text:10001010
+.text:10001010
+.text:10001010
+.text:10001010 public entry_rtv_mom_cp_part_attr
+.text:10001010 entry_rtv_mom_cp_part_attr proc near
+.text:10001010
+.text:10001010 var_8= dword ptr	-8
+.text:10001010 var_4= dword ptr	-4
+.text:10001010 arg_0= dword ptr	 4
+.text:10001010 arg_4= dword ptr	 8
+.text:10001010
+.text:10001010 sub     esp, 8
+.text:10001013 push    ebx
+.text:10001014 mov     [esp+0Ch+var_8],	0
+.text:1000101C xor     bl, bl
+.text:1000101E call    ds:UF_is_initialized
+.text:10001024 test    eax, eax
+.text:10001026 jnz     short loc_10001034
+.text:10001028 call    ds:UF_initialize
+.text:1000102E test    eax, eax
+.text:10001030 jnz     short loc_1000107F
+.text:10001032 mov     bl, 1
+.text:10001034
+.text:10001034 loc_10001034:
+.text:10001034 push    esi
+.text:10001035 mov     esi, [esp+10h+arg_0]
+.text:10001039 lea     eax, [esp+10h+var_8]
+.text:1000103D push    eax
+.text:1000103E push    esi
+.text:1000103F call    ds:UF_MOM_ask_interp_from_param
+.text:10001045 lea     ecx, [esp+18h+var_4]
+.text:10001049 push    ecx
+.text:1000104A push    esi
+.text:1000104B call    ds:UF_MOM_ask_mom
+.text:10001051 mov     edx, [esp+20h+var_4]
+.text:10001055 push    offset sub_10001090
+.text:1000105A push    offset aExtn_rtv_mom_c ;	"EXTN_rtv_mom_cp_part_attr"
+.text:1000105F push    edx
+.text:10001060 call    ds:UF_MOM_extend_xlator
+.text:10001066 mov     eax, [esp+2Ch+arg_4]
+.text:1000106A add     esp, 1Ch
+.text:1000106D cmp     bl, 1
+.text:10001070 mov     dword ptr [eax],	0
+.text:10001076 pop     esi
+.text:10001077 jnz     short loc_1000107F
+.text:10001079 call    ds:UF_terminate
+.text:1000107F
+.text:1000107F loc_1000107F:
+.text:1000107F pop     ebx
+.text:10001080 add     esp, 8
+.text:10001083 retn
+.text:10001083 entry_rtv_mom_cp_part_attr endp
+.text:10001083
+.text:10001084 align 10h
+.text:10001090
+.text:10001090
+.text:10001090 ; Attributes: bp-based frame
+.text:10001090
+.text:10001090 sub_10001090 proc near
+.text:10001090
+.text:10001090 var_229=	byte ptr -229h
+.text:10001090 var_228=	qword ptr -228h
+.text:10001090 var_21C=	qword ptr -21Ch
+.text:10001090 var_214=	qword ptr -214h
+.text:10001090 var_20C=	qword ptr -20Ch
+.text:10001090 var_204=	dword ptr -204h
+.text:10001090 var_200=	dword ptr -200h
+.text:10001090 var_1FC=	dword ptr -1FCh
+.text:10001090 var_1F8=	dword ptr -1F8h
+.text:10001090 String= dword ptr -1ECh
+.text:10001090 var_1E8=	dword ptr -1E8h
+.text:10001090 var_1E4=	dword ptr -1E4h
+.text:10001090 var_1E0=	dword ptr -1E0h
+.text:10001090 var_1DC=	dword ptr -1DCh
+.text:10001090 var_1D8=	qword ptr -1D8h
+.text:10001090 var_1CC=	dword ptr -1CCh
+.text:10001090 var_1C8=	qword ptr -1C8h
+.text:10001090 var_1C0=	qword ptr -1C0h
+.text:10001090 var_1B8=	qword ptr -1B8h
+.text:10001090 var_1B0=	qword ptr -1B0h
+.text:10001090 var_1A8=	qword ptr -1A8h
+.text:10001090 var_1A0=	qword ptr -1A0h
+.text:10001090 var_198=	dword ptr -198h
+.text:10001090 var_194=	dword ptr -194h
+.text:10001090 var_190=	dword ptr -190h
+.text:10001090 var_18C=	word ptr -18Ch
+.text:10001090 var_18A=	dword ptr -18Ah
+.text:10001090 var_186=	dword ptr -186h
+.text:10001090 var_182=	word ptr -182h
+.text:10001090 var_180=	dword ptr -180h
+.text:10001090 var_17C=	dword ptr -17Ch
+.text:10001090 var_178=	byte ptr -178h
+.text:10001090 var_177=	dword ptr -177h
+.text:10001090 var_173=	word ptr -173h
+.text:10001090 var_171=	byte ptr -171h
+.text:10001090 var_170=	qword ptr -170h
+.text:10001090 var_168=	qword ptr -168h
+.text:10001090 var_160=	qword ptr -160h
+.text:10001090 var_158=	dword ptr -158h
+.text:10001090 var_154=	dword ptr -154h
+.text:10001090 Dest= byte ptr -150h
+.text:10001090 var_24= byte ptr	-24h
+.text:10001090 arg_0= dword ptr	 8
+.text:10001090 arg_8= dword ptr	 10h
+.text:10001090 arg_C= dword ptr	 14h
+.text:10001090
+.text:10001090 push    ebp
+.text:10001091 mov     ebp, esp
+.text:10001093 and     esp, 0FFFFFFF8h
+.text:10001096 sub     esp, 22Ch
+.text:1000109C mov     eax, dword_10003760
+.text:100010A1 mov     cx, word_10003764
+.text:100010A8 mov     [esp+22Ch+var_190], eax
+.text:100010AF mov     eax, dword_10003754
+.text:100010B4 xor     edx, edx
+.text:100010B6 mov     [esp+22Ch+var_180], eax
+.text:100010BD mov     [esp+22Ch+var_18A], edx
+.text:100010C4 xor     eax, eax
+.text:100010C6 mov     [esp+22Ch+var_186], edx
+.text:100010CD push    ebx
+.text:100010CE mov     [esp+230h+var_177], eax
+.text:100010D5 push    esi
+.text:100010D6 mov     [esp+234h+var_18C], cx
+.text:100010DE mov     ecx, dword_10003758
+.text:100010E4 mov     [esp+234h+var_182], dx
+.text:100010EC mov     dl, byte_1000375C
+.text:100010F2 mov     esi, 1
+.text:100010F7 mov     [esp+234h+var_173], ax
+.text:100010FF push    edi
+.text:10001100 mov     [esp+238h+var_158], esi
+.text:10001107 mov     [esp+238h+var_154], esi
+.text:1000110E mov     [esp+238h+var_198], esi
+.text:10001115 mov     [esp+238h+var_194], esi
+.text:1000111C mov     [esp+238h+var_1E8], 0
+.text:10001124 mov     [esp+238h+var_1E4], 40590000h
+.text:1000112C mov     [esp+238h+var_1E0], 0
+.text:10001134 mov     [esp+238h+var_1DC], 40240000h
+.text:1000113C mov     [esp+238h+var_17C], ecx
+.text:10001143 mov     [esp+238h+var_178], dl
+.text:1000114A mov     [esp+238h+var_171], al
+.text:10001151 call    sub_10001BD0
+.text:10001156 cmp     eax, esi
+.text:10001158 jz      short loc_1000117E
+.text:1000115A push    0
+.text:1000115C push    offset unk_10003658
+.text:10001161 push    offset aAsRasx  ; "Внимание!"
+.text:10001166 call    ds:UF_UI_display_nonmodal_msg
+.text:1000116C add     esp, 0Ch
+.text:1000116F call    ds:UF_terminate
+.text:10001175 xor     eax, eax
+.text:10001177 pop     edi
+.text:10001178 pop     esi
+.text:10001179 pop     ebx
+.text:1000117A mov     esp, ebp
+.text:1000117C pop     ebp
+.text:1000117D retn
+.text:1000117E
+.text:1000117E loc_1000117E:
+.text:1000117E mov     edi, [ebp+arg_8]
+.text:10001181 mov     ebx, ds:sprintf
+.text:10001187 push    edi
+.text:10001188 lea     ecx, [esp+23Ch+Dest]
+.text:1000118F push    offset Format   ; "Number of args %ld"
+.text:10001194 push    ecx	       ; Dest
+.text:10001195 call    ebx ; sprintf
+.text:10001197 add     esp, 0Ch
+.text:1000119A test    edi, edi
+.text:1000119C jle     short loc_100011BC
+.text:1000119E mov     esi, [ebp+arg_C]
+.text:100011A1
+.text:100011A1 loc_100011A1:
+.text:100011A1 mov     edx, [esi]
+.text:100011A3 lea     eax, [esp+238h+Dest]
+.text:100011AA push    edx
+.text:100011AB push    offset aArg0S   ; "Arg 0	%s"
+.text:100011B0 push    eax	       ; Dest
+.text:100011B1 call    ebx ; sprintf
+.text:100011B3 add     esp, 0Ch
+.text:100011B6 add     esi, 4
+.text:100011B9 dec     edi
+.text:100011BA jnz     short loc_100011A1
+.text:100011BC
+.text:100011BC loc_100011BC:
+.text:100011BC mov     ecx, [ebp+arg_C]
+.text:100011BF mov     esi, offset aPlane ; "PLANE"
+.text:100011C4 mov     eax, [ecx+4]
+.text:100011C7
+.text:100011C7 loc_100011C7:
+.text:100011C7 mov     dl, [eax]
+.text:100011C9 mov     cl, dl
+.text:100011CB cmp     dl, [esi]
+.text:100011CD jnz     short loc_100011EB
+.text:100011CF test    cl, cl
+.text:100011D1 jz      short loc_100011E7
+.text:100011D3 mov     dl, [eax+1]
+.text:100011D6 mov     cl, dl
+.text:100011D8 cmp     dl, [esi+1]
+.text:100011DB jnz     short loc_100011EB
+.text:100011DD add     eax, 2
+.text:100011E0 add     esi, 2
+.text:100011E3 test    cl, cl
+.text:100011E5 jnz     short loc_100011C7
+.text:100011E7
+.text:100011E7 loc_100011E7:
+.text:100011E7 xor     eax, eax
+.text:100011E9 jmp     short loc_100011F0
+.text:100011EB
+.text:100011EB loc_100011EB:
+.text:100011EB sbb     eax, eax
+.text:100011ED sbb     eax, 0FFFFFFFFh
+.text:100011F0
+.text:100011F0 loc_100011F0:
+.text:100011F0 mov     esi, [ebp+arg_0]
+.text:100011F3 mov     edi, ds:UF_MOM_ask_assoc_double_array
+.text:100011F9 test    eax, eax
+.text:100011FB jnz     short loc_10001256
+.text:100011FD lea     eax, [esp+238h+var_204]
+.text:10001201 push    eax
+.text:10001202 push    offset a0       ; "0"
+.text:10001207 push    offset aOut_angle_pos ; "out_angle_pos"
+.text:1000120C push    esi
+.text:1000120D call    edi ; UF_MOM_ask_assoc_double_array
+.text:1000120F lea     ecx, [esp+248h+var_1FC]
+.text:10001213 push    ecx
+.text:10001214 push    offset a1       ; "1"
+.text:10001219 push    offset aOut_angle_pos ; "out_angle_pos"
+.text:1000121E push    esi
+.text:1000121F call    edi ; UF_MOM_ask_assoc_double_array
+.text:10001221 mov     edx, [esp+258h+var_1F8]
+.text:10001225 mov     eax, [esp+258h+var_1FC]
+.text:10001229 mov     ecx, [esp+258h+var_200]
+.text:1000122D push    edx
+.text:1000122E mov     edx, [esp+25Ch+var_204]
+.text:10001232 push    eax
+.text:10001233 push    ecx
+.text:10001234 push    edx
+.text:10001235 lea     eax, [esp+268h+Dest]
+.text:1000123C push    offset aMom_output_lit ;	"MOM_output_literal \"PLANE SPATIAL SPA%."...
+.text:10001241 push    eax	       ; Dest
+.text:10001242 call    ebx ; sprintf
+.text:10001244 lea     ecx, [esp+270h+Dest]
+.text:1000124B push    ecx
+.text:1000124C push    esi
+.text:1000124D call    ds:UF_MOM_execute_command
+.text:10001253 add     esp, 40h
+.text:10001256
+.text:10001256 loc_10001256:
+.text:10001256 mov     edx, [ebp+arg_C]
+.text:10001259 mov     ecx, offset aPlane_novomet ; "PLANE_NOVOMET"
+.text:1000125E mov     eax, [edx+4]
+.text:10001261
+.text:10001261 loc_10001261:
+.text:10001261 mov     bl, [eax]
+.text:10001263 mov     dl, bl
+.text:10001265 cmp     bl, [ecx]
+.text:10001267 jnz     short loc_10001285
+.text:10001269 test    dl, dl
+.text:1000126B jz      short loc_10001281
+.text:1000126D mov     bl, [eax+1]
+.text:10001270 mov     dl, bl
+.text:10001272 cmp     bl, [ecx+1]
+.text:10001275 jnz     short loc_10001285
+.text:10001277 add     eax, 2
+.text:1000127A add     ecx, 2
+.text:1000127D test    dl, dl
+.text:1000127F jnz     short loc_10001261
+.text:10001281
+.text:10001281 loc_10001281:
+.text:10001281 xor     eax, eax
+.text:10001283 jmp     short loc_1000128A
+.text:10001285
+.text:10001285 loc_10001285:
+.text:10001285 sbb     eax, eax
+.text:10001287 sbb     eax, 0FFFFFFFFh
+.text:1000128A
+.text:1000128A loc_1000128A:
+.text:1000128A test    eax, eax
+.text:1000128C jnz     loc_10001312
+.text:10001292 lea     eax, [esp+238h+var_204]
+.text:10001296 push    eax
+.text:10001297 push    offset a0       ; "0"
+.text:1000129C push    offset aOut_angle_pos ; "out_angle_pos"
+.text:100012A1 push    esi
+.text:100012A2 call    edi ; UF_MOM_ask_assoc_double_array
+.text:100012A4 lea     ecx, [esp+248h+var_1FC]
+.text:100012A8 push    ecx
+.text:100012A9 push    offset a1       ; "1"
+.text:100012AE push    offset aOut_angle_pos ; "out_angle_pos"
+.text:100012B3 push    esi
+.text:100012B4 call    edi ; UF_MOM_ask_assoc_double_array
+.text:100012B6 mov     edx, [esp+258h+var_1F8]
+.text:100012BA mov     eax, [esp+258h+var_1FC]
+.text:100012BE push    edx
+.text:100012BF push    eax
+.text:100012C0 lea     ecx, [esp+260h+Dest]
+.text:100012C7 push    offset aMom_output_l_0 ;	"MOM_output_literal \"FN1: Q31=%.3lf + +Q"...
+.text:100012CC push    ecx	       ; Dest
+.text:100012CD call    ds:sprintf
+.text:100012D3 mov     ebx, ds:UF_MOM_execute_command
+.text:100012D9 lea     edx, [esp+268h+Dest]
+.text:100012E0 push    edx
+.text:100012E1 push    esi
+.text:100012E2 call    ebx ; UF_MOM_execute_command
+.text:100012E4 mov     eax, [esp+270h+var_200]
+.text:100012E8 mov     ecx, [esp+270h+var_204]
+.text:100012EC push    eax
+.text:100012ED push    ecx
+.text:100012EE lea     edx, [esp+278h+Dest]
+.text:100012F5 push    offset aMom_output_l_1 ;	"MOM_output_literal \"PLANE SPATIAL SPA%."...
+.text:100012FA push    edx	       ; Dest
+.text:100012FB call    ds:sprintf
+.text:10001301 add     esp, 48h
+.text:10001304 lea     eax, [esp+238h+Dest]
+.text:1000130B push    eax
+.text:1000130C push    esi
+.text:1000130D call    ebx ; UF_MOM_execute_command
+.text:1000130F add     esp, 8
+.text:10001312
+.text:10001312 loc_10001312:
+.text:10001312 mov     edx, [ebp+arg_C]
+.text:10001315 mov     ecx, offset aPlane_001 ;	"PLANE_001"
+.text:1000131A mov     eax, [edx+4]
+.text:1000131D
+.text:1000131D loc_1000131D:
+.text:1000131D mov     bl, [eax]
+.text:1000131F mov     dl, bl
+.text:10001321 cmp     bl, [ecx]
+.text:10001323 jnz     short loc_10001341
+.text:10001325 test    dl, dl
+.text:10001327 jz      short loc_1000133D
+.text:10001329 mov     bl, [eax+1]
+.text:1000132C mov     dl, bl
+.text:1000132E cmp     bl, [ecx+1]
+.text:10001331 jnz     short loc_10001341
+.text:10001333 add     eax, 2
+.text:10001336 add     ecx, 2
+.text:10001339 test    dl, dl
+.text:1000133B jnz     short loc_1000131D
+.text:1000133D
+.text:1000133D loc_1000133D:
+.text:1000133D xor     eax, eax
+.text:1000133F jmp     short loc_10001346
+.text:10001341
+.text:10001341 loc_10001341:
+.text:10001341 sbb     eax, eax
+.text:10001343 sbb     eax, 0FFFFFFFFh
+.text:10001346
+.text:10001346 loc_10001346:
+.text:10001346 test    eax, eax
+.text:10001348 jnz     short loc_1000139D
+.text:1000134A lea     eax, [esp+238h+var_204]
+.text:1000134E push    eax
+.text:1000134F push    offset a0       ; "0"
+.text:10001354 push    offset aOut_angle_pos ; "out_angle_pos"
+.text:10001359 push    esi
+.text:1000135A call    edi ; UF_MOM_ask_assoc_double_array
+.text:1000135C lea     ecx, [esp+248h+var_1FC]
+.text:10001360 push    ecx
+.text:10001361 push    offset a1       ; "1"
+.text:10001366 push    offset aOut_angle_pos ; "out_angle_pos"
+.text:1000136B push    esi
+.text:1000136C call    edi ; UF_MOM_ask_assoc_double_array
+.text:1000136E mov     edx, [esp+258h+var_1F8]
+.text:10001372 mov     eax, [esp+258h+var_1FC]
+.text:10001376 push    edx
+.text:10001377 push    eax
+.text:10001378 lea     ecx, [esp+260h+Dest]
+.text:1000137F push    offset aMom_output_l_2 ;	"MOM_output_literal \"PLANE SPATIAL SPA-0"...
+.text:10001384 push    ecx	       ; Dest
+.text:10001385 call    ds:sprintf
+.text:1000138B lea     edx, [esp+268h+Dest]
+.text:10001392 push    edx
+.text:10001393 push    esi
+.text:10001394 call    ds:UF_MOM_execute_command
+.text:1000139A add     esp, 38h
+.text:1000139D
+.text:1000139D loc_1000139D:
+.text:1000139D mov     eax, [ebp+arg_C]
+.text:100013A0 mov     ecx, offset aPlane_plus_nov ; "PLANE_PLUS_NOVOMET"
+.text:100013A5 mov     eax, [eax+4]
+.text:100013A8
+.text:100013A8 loc_100013A8:
+.text:100013A8 mov     bl, [eax]
+.text:100013AA mov     dl, bl
+.text:100013AC cmp     bl, [ecx]
+.text:100013AE jnz     short loc_100013CC
+.text:100013B0 test    dl, dl
+.text:100013B2 jz      short loc_100013C8
+.text:100013B4 mov     bl, [eax+1]
+.text:100013B7 mov     dl, bl
+.text:100013B9 cmp     bl, [ecx+1]
+.text:100013BC jnz     short loc_100013CC
+.text:100013BE add     eax, 2
+.text:100013C1 add     ecx, 2
+.text:100013C4 test    dl, dl
+.text:100013C6 jnz     short loc_100013A8
+.text:100013C8
+.text:100013C8 loc_100013C8:
+.text:100013C8 xor     eax, eax
+.text:100013CA jmp     short loc_100013D1
+.text:100013CC
+.text:100013CC loc_100013CC:
+.text:100013CC sbb     eax, eax
+.text:100013CE sbb     eax, 0FFFFFFFFh
+.text:100013D1
+.text:100013D1 loc_100013D1:
+.text:100013D1 test    eax, eax
+.text:100013D3 jnz     loc_10001459
+.text:100013D9 lea     ecx, [esp+238h+var_204]
+.text:100013DD push    ecx
+.text:100013DE push    offset a0       ; "0"
+.text:100013E3 push    offset aOut_angle_pos ; "out_angle_pos"
+.text:100013E8 push    esi
+.text:100013E9 call    edi ; UF_MOM_ask_assoc_double_array
+.text:100013EB lea     edx, [esp+248h+var_1FC]
+.text:100013EF push    edx
+.text:100013F0 push    offset a1       ; "1"
+.text:100013F5 push    offset aOut_angle_pos ; "out_angle_pos"
+.text:100013FA push    esi
+.text:100013FB call    edi ; UF_MOM_ask_assoc_double_array
+.text:100013FD mov     eax, [esp+258h+var_1F8]
+.text:10001401 mov     ecx, [esp+258h+var_1FC]
+.text:10001405 push    eax
+.text:10001406 push    ecx
+.text:10001407 lea     edx, [esp+260h+Dest]
+.text:1000140E push    offset aMom_output_l_0 ;	"MOM_output_literal \"FN1: Q31=%.3lf + +Q"...
+.text:10001413 push    edx	       ; Dest
+.text:10001414 call    ds:sprintf
+.text:1000141A mov     ebx, ds:UF_MOM_execute_command
+.text:10001420 lea     eax, [esp+268h+Dest]
+.text:10001427 push    eax
+.text:10001428 push    esi
+.text:10001429 call    ebx ; UF_MOM_execute_command
+.text:1000142B mov     ecx, [esp+270h+var_200]
+.text:1000142F mov     edx, [esp+270h+var_204]
+.text:10001433 push    ecx
+.text:10001434 push    edx
+.text:10001435 lea     eax, [esp+278h+Dest]
+.text:1000143C push    offset aMom_output_l_3 ;	"MOM_output_literal \"PLANE SPATIAL SPA%."...
+.text:10001441 push    eax	       ; Dest
+.text:10001442 call    ds:sprintf
+.text:10001448 add     esp, 48h
+.text:1000144B lea     ecx, [esp+238h+Dest]
+.text:10001452 push    ecx
+.text:10001453 push    esi
+.text:10001454 call    ebx ; UF_MOM_execute_command
+.text:10001456 add     esp, 8
+.text:10001459
+.text:10001459 loc_10001459:
+.text:10001459 mov     edx, [ebp+arg_C]
+.text:1000145C mov     ecx, offset aPlane_moving ; "PLANE_moving"
+.text:10001461 mov     eax, [edx+4]
+.text:10001464
+.text:10001464 loc_10001464:
+.text:10001464 mov     bl, [eax]
+.text:10001466 mov     dl, bl
+.text:10001468 cmp     bl, [ecx]
+.text:1000146A jnz     short loc_10001488
+.text:1000146C test    dl, dl
+.text:1000146E jz      short loc_10001484
+.text:10001470 mov     bl, [eax+1]
+.text:10001473 mov     dl, bl
+.text:10001475 cmp     bl, [ecx+1]
+.text:10001478 jnz     short loc_10001488
+.text:1000147A add     eax, 2
+.text:1000147D add     ecx, 2
+.text:10001480 test    dl, dl
+.text:10001482 jnz     short loc_10001464
+.text:10001484
+.text:10001484 loc_10001484:
+.text:10001484 xor     eax, eax
+.text:10001486 jmp     short loc_1000148D
+.text:10001488
+.text:10001488 loc_10001488:
+.text:10001488 sbb     eax, eax
+.text:1000148A sbb     eax, 0FFFFFFFFh
+.text:1000148D
+.text:1000148D loc_1000148D:
+.text:1000148D test    eax, eax
+.text:1000148F jnz     loc_10001531
+.text:10001495 lea     eax, [esp+238h+var_21C]
+.text:10001499 push    eax
+.text:1000149A push    offset a0       ; "0"
+.text:1000149F push    offset aPos     ; "pos"
+.text:100014A4 push    esi
+.text:100014A5 call    edi ; UF_MOM_ask_assoc_double_array
+.text:100014A7 lea     ecx, [esp+248h+var_214]
+.text:100014AB push    ecx
+.text:100014AC push    offset a1       ; "1"
+.text:100014B1 push    offset aPos     ; "pos"
+.text:100014B6 push    esi
+.text:100014B7 call    edi ; UF_MOM_ask_assoc_double_array
+.text:100014B9 lea     edx, [esp+258h+var_20C]
+.text:100014BD push    edx
+.text:100014BE push    offset a2       ; "2"
+.text:100014C3 push    offset aPos     ; "pos"
+.text:100014C8 push    esi
+.text:100014C9 call    edi ; UF_MOM_ask_assoc_double_array
+.text:100014CB mov     eax, dword ptr [esp+268h+var_214+4]
+.text:100014CF mov     ecx, dword ptr [esp+268h+var_214]
+.text:100014D3 mov     edx, dword ptr [esp+268h+var_21C+4]
+.text:100014D7 push    eax
+.text:100014D8 mov     eax, dword ptr [esp+26Ch+var_21C]
+.text:100014DC push    ecx
+.text:100014DD push    edx
+.text:100014DE push    eax
+.text:100014DF lea     ecx, [esp+278h+Dest]
+.text:100014E6 push    offset aMom_output_l_4 ;	"MOM_output_literal \"L	X%.3lf Y%.3lf F	M"...
+.text:100014EB push    ecx	       ; Dest
+.text:100014EC call    ds:sprintf
+.text:100014F2 mov     ebx, ds:UF_MOM_execute_command
+.text:100014F8 add     esp, 48h
+.text:100014FB lea     edx, [esp+238h+Dest]
+.text:10001502 push    edx
+.text:10001503 push    esi
+.text:10001504 call    ebx ; UF_MOM_execute_command
+.text:10001506 mov     eax, dword ptr [esp+240h+var_20C+4]
+.text:1000150A mov     ecx, dword ptr [esp+240h+var_20C]
+.text:1000150E push    eax
+.text:1000150F push    ecx
+.text:10001510 lea     edx, [esp+248h+Dest]
+.text:10001517 push    offset aMom_output_l_5 ;	"MOM_output_literal \"L	Z%.3lf F MAX\""
+.text:1000151C push    edx	       ; Dest
+.text:1000151D call    ds:sprintf
+.text:10001523 lea     eax, [esp+250h+Dest]
+.text:1000152A push    eax
+.text:1000152B push    esi
+.text:1000152C call    ebx ; UF_MOM_execute_command
+.text:1000152E add     esp, 20h
+.text:10001531
+.text:10001531 loc_10001531:
+.text:10001531 mov     edx, [ebp+arg_C]
+.text:10001534 mov     ecx, offset aPlane_moving_m ; "PLANE_moving_M128"
+.text:10001539 mov     eax, [edx+4]
+.text:1000153C
+.text:1000153C loc_1000153C:
+.text:1000153C mov     bl, [eax]
+.text:1000153E mov     dl, bl
+.text:10001540 cmp     bl, [ecx]
+.text:10001542 jnz     short loc_10001560
+.text:10001544 test    dl, dl
+.text:10001546 jz      short loc_1000155C
+.text:10001548 mov     bl, [eax+1]
+.text:1000154B mov     dl, bl
+.text:1000154D cmp     bl, [ecx+1]
+.text:10001550 jnz     short loc_10001560
+.text:10001552 add     eax, 2
+.text:10001555 add     ecx, 2
+.text:10001558 test    dl, dl
+.text:1000155A jnz     short loc_1000153C
+.text:1000155C
+.text:1000155C loc_1000155C:
+.text:1000155C xor     eax, eax
+.text:1000155E jmp     short loc_10001565
+.text:10001560
+.text:10001560 loc_10001560:
+.text:10001560 sbb     eax, eax
+.text:10001562 sbb     eax, 0FFFFFFFFh
+.text:10001565
+.text:10001565 loc_10001565:
+.text:10001565 test    eax, eax
+.text:10001567 jnz     loc_10001648
+.text:1000156D lea     eax, [esp+238h+var_21C]
+.text:10001571 push    eax
+.text:10001572 push    offset a0       ; "0"
+.text:10001577 push    offset aMcs_goto	; "mcs_goto"
+.text:1000157C push    esi
+.text:1000157D call    edi ; UF_MOM_ask_assoc_double_array
+.text:1000157F lea     ecx, [esp+248h+var_214]
+.text:10001583 push    ecx
+.text:10001584 push    offset a1       ; "1"
+.text:10001589 push    offset aMcs_goto	; "mcs_goto"
+.text:1000158E push    esi
+.text:1000158F call    edi ; UF_MOM_ask_assoc_double_array
+.text:10001591 lea     edx, [esp+258h+var_20C]
+.text:10001595 push    edx
+.text:10001596 push    offset a2       ; "2"
+.text:1000159B push    offset aMcs_goto	; "mcs_goto"
+.text:100015A0 push    esi
+.text:100015A1 call    edi ; UF_MOM_ask_assoc_double_array
+.text:100015A3 lea     eax, [esp+268h+Dest]
+.text:100015AA push    offset aMom_output_l_6 ;	"MOM_output_literal \"M128 \""
+.text:100015AF push    eax	       ; Dest
+.text:100015B0 call    ds:sprintf
+.text:100015B6 mov     ebx, ds:UF_MOM_execute_command
+.text:100015BC lea     ecx, [esp+270h+Dest]
+.text:100015C3 push    ecx
+.text:100015C4 push    esi
+.text:100015C5 call    ebx ; UF_MOM_execute_command
+.text:100015C7 mov     edx, dword ptr [esp+278h+var_214+4]
+.text:100015CB mov     eax, dword ptr [esp+278h+var_214]
+.text:100015CF mov     ecx, dword ptr [esp+278h+var_21C+4]
+.text:100015D3 add     esp, 40h
+.text:100015D6 push    edx
+.text:100015D7 mov     edx, dword ptr [esp+23Ch+var_21C]
+.text:100015DB push    eax
+.text:100015DC push    ecx
+.text:100015DD push    edx
+.text:100015DE lea     eax, [esp+248h+Dest]
+.text:100015E5 push    offset aMom_output_l_7 ;	"MOM_output_literal \"L	X%.3lf Y%.3lf F	M"...
+.text:100015EA push    eax	       ; Dest
+.text:100015EB call    ds:sprintf
+.text:100015F1 lea     ecx, [esp+250h+Dest]
+.text:100015F8 push    ecx
+.text:100015F9 push    esi
+.text:100015FA call    ebx ; UF_MOM_execute_command
+.text:100015FC mov     edx, dword ptr [esp+258h+var_20C+4]
+.text:10001600 mov     eax, dword ptr [esp+258h+var_20C]
+.text:10001604 push    edx
+.text:10001605 push    eax
+.text:10001606 lea     ecx, [esp+260h+Dest]
+.text:1000160D push    offset aMom_output_l_8 ;	"MOM_output_literal \"L	Z%.3lf F MAX \""
+.text:10001612 push    ecx	       ; Dest
+.text:10001613 call    ds:sprintf
+.text:10001619 lea     edx, [esp+268h+Dest]
+.text:10001620 push    edx
+.text:10001621 push    esi
+.text:10001622 call    ebx ; UF_MOM_execute_command
+.text:10001624 lea     eax, [esp+270h+Dest]
+.text:1000162B push    offset aMom_output_l_9 ;	"MOM_output_literal \"M129 \""
+.text:10001630 push    eax	       ; Dest
+.text:10001631 call    ds:sprintf
+.text:10001637 add     esp, 40h
+.text:1000163A lea     ecx, [esp+238h+Dest]
+.text:10001641 push    ecx
+.text:10001642 push    esi
+.text:10001643 call    ebx ; UF_MOM_execute_command
+.text:10001645 add     esp, 8
+.text:10001648
+.text:10001648 loc_10001648:
+.text:10001648 mov     edx, [ebp+arg_C]
+.text:1000164B mov     ecx, offset aM128 ; "M128"
+.text:10001650 mov     eax, [edx+4]
+.text:10001653
+.text:10001653 loc_10001653:
+.text:10001653 mov     bl, [eax]
+.text:10001655 mov     dl, bl
+.text:10001657 cmp     bl, [ecx]
+.text:10001659 jnz     short loc_10001677
+.text:1000165B test    dl, dl
+.text:1000165D jz      short loc_10001673
+.text:1000165F mov     bl, [eax+1]
+.text:10001662 mov     dl, bl
+.text:10001664 cmp     bl, [ecx+1]
+.text:10001667 jnz     short loc_10001677
+.text:10001669 add     eax, 2
+.text:1000166C add     ecx, 2
+.text:1000166F test    dl, dl
+.text:10001671 jnz     short loc_10001653
+.text:10001673
+.text:10001673 loc_10001673:
+.text:10001673 xor     eax, eax
+.text:10001675 jmp     short loc_1000167C
+.text:10001677
+.text:10001677 loc_10001677:
+.text:10001677 sbb     eax, eax
+.text:10001679 sbb     eax, 0FFFFFFFFh
+.text:1000167C
+.text:1000167C loc_1000167C:
+.text:1000167C mov     ebx, ds:UF_MOM_set_assoc_double_array
+.text:10001682 test    eax, eax
+.text:10001684 jnz     loc_1000170B
+.text:1000168A lea     eax, [esp+238h+var_21C]
+.text:1000168E push    eax
+.text:1000168F push    offset a0       ; "0"
+.text:10001694 push    offset aMcs_goto	; "mcs_goto"
+.text:10001699 push    esi
+.text:1000169A call    edi ; UF_MOM_ask_assoc_double_array
+.text:1000169C lea     ecx, [esp+248h+var_214]
+.text:100016A0 push    ecx
+.text:100016A1 push    offset a1       ; "1"
+.text:100016A6 push    offset aMcs_goto	; "mcs_goto"
+.text:100016AB push    esi
+.text:100016AC call    edi ; UF_MOM_ask_assoc_double_array
+.text:100016AE lea     edx, [esp+258h+var_20C]
+.text:100016B2 push    edx
+.text:100016B3 push    offset a2       ; "2"
+.text:100016B8 push    offset aMcs_goto	; "mcs_goto"
+.text:100016BD push    esi
+.text:100016BE call    edi ; UF_MOM_ask_assoc_double_array
+.text:100016C0 mov     eax, dword ptr [esp+268h+var_21C+4]
+.text:100016C4 mov     ecx, dword ptr [esp+268h+var_21C]
+.text:100016C8 push    eax
+.text:100016C9 push    ecx
+.text:100016CA push    offset a0       ; "0"
+.text:100016CF push    offset aPos     ; "pos"
+.text:100016D4 push    esi
+.text:100016D5 call    ebx ; UF_MOM_set_assoc_double_array
+.text:100016D7 mov     edx, dword ptr [esp+27Ch+var_214+4]
+.text:100016DB mov     eax, dword ptr [esp+27Ch+var_214]
+.text:100016DF add     esp, 44h
+.text:100016E2 push    edx
+.text:100016E3 push    eax
+.text:100016E4 push    offset a1       ; "1"
+.text:100016E9 push    offset aPos     ; "pos"
+.text:100016EE push    esi
+.text:100016EF call    ebx ; UF_MOM_set_assoc_double_array
+.text:100016F1 mov     ecx, dword ptr [esp+24Ch+var_20C+4]
+.text:100016F5 mov     edx, dword ptr [esp+24Ch+var_20C]
+.text:100016F9 push    ecx
+.text:100016FA push    edx
+.text:100016FB push    offset a2       ; "2"
+.text:10001700 push    offset aPos     ; "pos"
+.text:10001705 push    esi
+.text:10001706 call    ebx ; UF_MOM_set_assoc_double_array
+.text:10001708 add     esp, 28h
+.text:1000170B
+.text:1000170B loc_1000170B:
+.text:1000170B mov     eax, [ebp+arg_C]
+.text:1000170E mov     dword ptr [esp+238h+var_228], offset aPlane_dmc ; "PLANE_DMC"
+.text:10001716 mov     eax, [eax+4]
+.text:10001719
+.text:10001719 loc_10001719:
+.text:10001719 mov     cl, [eax]
+.text:1000171B mov     edx, dword ptr [esp+238h+var_228]
+.text:1000171F mov     [esp+238h+var_229], cl
+.text:10001723 cmp     cl, [edx]
+.text:10001725 jnz     short loc_10001749
+.text:10001727 test    cl, cl
+.text:10001729 jz      short loc_10001745
+.text:1000172B mov     cl, [eax+1]
+.text:1000172E mov     [esp+238h+var_229], cl
+.text:10001732 cmp     cl, [edx+1]
+.text:10001735 jnz     short loc_10001749
+.text:10001737 add     eax, 2
+.text:1000173A add     edx, 2
+.text:1000173D test    cl, cl
+.text:1000173F mov     dword ptr [esp+238h+var_228], edx
+.text:10001743 jnz     short loc_10001719
+.text:10001745
+.text:10001745 loc_10001745:
+.text:10001745 xor     eax, eax
+.text:10001747 jmp     short loc_1000174E
+.text:10001749
+.text:10001749 loc_10001749:
+.text:10001749 sbb     eax, eax
+.text:1000174B sbb     eax, 0FFFFFFFFh
+.text:1000174E
+.text:1000174E loc_1000174E:
+.text:1000174E test    eax, eax
+.text:10001750 jnz     short loc_100017A5
+.text:10001752 lea     eax, [esp+238h+var_204]
+.text:10001756 push    eax
+.text:10001757 push    offset a0       ; "0"
+.text:1000175C push    offset aOut_angle_pos ; "out_angle_pos"
+.text:10001761 push    esi
+.text:10001762 call    edi ; UF_MOM_ask_assoc_double_array
+.text:10001764 lea     ecx, [esp+248h+var_1FC]
+.text:10001768 push    ecx
+.text:10001769 push    offset a1       ; "1"
+.text:1000176E push    offset aOut_angle_pos ; "out_angle_pos"
+.text:10001773 push    esi
+.text:10001774 call    edi ; UF_MOM_ask_assoc_double_array
+.text:10001776 mov     edx, [esp+258h+var_200]
+.text:1000177A mov     eax, [esp+258h+var_204]
+.text:1000177E push    edx
+.text:1000177F push    eax
+.text:10001780 lea     ecx, [esp+260h+Dest]
+.text:10001787 push    offset aMom_output__10 ;	"MOM_output_literal \"L	A%.3lf FMAX \""
+.text:1000178C push    ecx	       ; Dest
+.text:1000178D call    ds:sprintf
+.text:10001793 lea     edx, [esp+268h+Dest]
+.text:1000179A push    edx
+.text:1000179B push    esi
+.text:1000179C call    ds:UF_MOM_execute_command
+.text:100017A2 add     esp, 38h
+.text:100017A5
+.text:100017A5 loc_100017A5:
+.text:100017A5 mov     eax, [ebp+arg_C]
+.text:100017A8 mov     dword ptr [esp+238h+var_228], offset aPlane_plus_dmc ; "PLANE_PLUS_DMC"
+.text:100017B0 mov     eax, [eax+4]
+.text:100017B3
+.text:100017B3 loc_100017B3:
+.text:100017B3 mov     cl, [eax]
+.text:100017B5 mov     edx, dword ptr [esp+238h+var_228]
+.text:100017B9 mov     [esp+238h+var_229], cl
+.text:100017BD cmp     cl, [edx]
+.text:100017BF jnz     short loc_100017E3
+.text:100017C1 test    cl, cl
+.text:100017C3 jz      short loc_100017DF
+.text:100017C5 mov     cl, [eax+1]
+.text:100017C8 mov     [esp+238h+var_229], cl
+.text:100017CC cmp     cl, [edx+1]
+.text:100017CF jnz     short loc_100017E3
+.text:100017D1 add     eax, 2
+.text:100017D4 add     edx, 2
+.text:100017D7 test    cl, cl
+.text:100017D9 mov     dword ptr [esp+238h+var_228], edx
+.text:100017DD jnz     short loc_100017B3
+.text:100017DF
+.text:100017DF loc_100017DF:
+.text:100017DF xor     eax, eax
+.text:100017E1 jmp     short loc_100017E8
+.text:100017E3
+.text:100017E3 loc_100017E3:
+.text:100017E3 sbb     eax, eax
+.text:100017E5 sbb     eax, 0FFFFFFFFh
+.text:100017E8
+.text:100017E8 loc_100017E8:
+.text:100017E8 test    eax, eax
+.text:100017EA jnz     short loc_1000183F
+.text:100017EC lea     eax, [esp+238h+var_204]
+.text:100017F0 push    eax
+.text:100017F1 push    offset a0       ; "0"
+.text:100017F6 push    offset aOut_angle_pos ; "out_angle_pos"
+.text:100017FB push    esi
+.text:100017FC call    edi ; UF_MOM_ask_assoc_double_array
+.text:100017FE lea     ecx, [esp+248h+var_1FC]
+.text:10001802 push    ecx
+.text:10001803 push    offset a1       ; "1"
+.text:10001808 push    offset aOut_angle_pos ; "out_angle_pos"
+.text:1000180D push    esi
+.text:1000180E call    edi ; UF_MOM_ask_assoc_double_array
+.text:10001810 mov     edx, [esp+258h+var_200]
+.text:10001814 mov     eax, [esp+258h+var_204]
+.text:10001818 push    edx
+.text:10001819 push    eax
+.text:1000181A lea     ecx, [esp+260h+Dest]
+.text:10001821 push    offset aMom_output__10 ;	"MOM_output_literal \"L	A%.3lf FMAX \""
+.text:10001826 push    ecx	       ; Dest
+.text:10001827 call    ds:sprintf
+.text:1000182D lea     edx, [esp+268h+Dest]
+.text:10001834 push    edx
+.text:10001835 push    esi
+.text:10001836 call    ds:UF_MOM_execute_command
+.text:1000183C add     esp, 38h
+.text:1000183F
+.text:1000183F loc_1000183F:
+.text:1000183F mov     eax, [ebp+arg_C]
+.text:10001842 mov     dword ptr [esp+238h+var_228], offset aInput_retract ; "INPUT_RETRACT"
+.text:1000184A mov     eax, [eax+4]
+.text:1000184D
+.text:1000184D loc_1000184D:
+.text:1000184D mov     cl, [eax]
+.text:1000184F mov     edx, dword ptr [esp+238h+var_228]
+.text:10001853 mov     [esp+238h+var_229], cl
+.text:10001857 cmp     cl, [edx]
+.text:10001859 jnz     short loc_1000187D
+.text:1000185B test    cl, cl
+.text:1000185D jz      short loc_10001879
+.text:1000185F mov     cl, [eax+1]
+.text:10001862 mov     [esp+238h+var_229], cl
+.text:10001866 cmp     cl, [edx+1]
+.text:10001869 jnz     short loc_1000187D
+.text:1000186B add     eax, 2
+.text:1000186E add     edx, 2
+.text:10001871 test    cl, cl
+.text:10001873 mov     dword ptr [esp+238h+var_228], edx
+.text:10001877 jnz     short loc_1000184D
+.text:10001879
+.text:10001879 loc_10001879:
+.text:10001879 xor     eax, eax
+.text:1000187B jmp     short loc_10001882
+.text:1000187D
+.text:1000187D loc_1000187D:
+.text:1000187D sbb     eax, eax
+.text:1000187F sbb     eax, 0FFFFFFFFh
+.text:10001882
+.text:10001882 loc_10001882:
+.text:10001882 test    eax, eax
+.text:10001884 jnz     short loc_100018FB
+.text:10001886 call    ds:UF_UI_close_listing_window
+.text:1000188C push    1
+.text:1000188E call    ds:UF_UI_lock_ug_access
+.text:10001894 lea     eax, [esp+23Ch+var_198]
+.text:1000189B lea     ecx, [esp+23Ch+var_1E8]
+.text:1000189F push    eax
+.text:100018A0 lea     edx, [esp+240h+var_158]
+.text:100018A7 push    ecx
+.text:100018A8 push    edx
+.text:100018A9 lea     eax, [esp+248h+var_190]
+.text:100018B0 push    2
+.text:100018B2 push    eax
+.text:100018B3 push    offset unk_100032E0
+.text:100018B8 call    ds:uc1608
+.text:100018BE mov     ecx, [esp+254h+var_1E4]
+.text:100018C2 mov     edx, [esp+254h+var_1E8]
+.text:100018C6 push    ecx
+.text:100018C7 push    edx
+.text:100018C8 push    offset aKin_retract_di ;	"kin_retract_distance"
+.text:100018CD push    esi
+.text:100018CE call    ds:UF_MOM_set_double
+.text:100018D4 mov     eax, [esp+264h+var_1DC]
+.text:100018DB mov     ecx, [esp+264h+var_1E0]
+.text:100018E2 push    eax
+.text:100018E3 push    ecx
+.text:100018E4 push    offset aKin_reengage_d ;	"kin_reengage_distance"
+.text:100018E9 push    esi
+.text:100018EA call    ds:UF_MOM_set_double
+.text:100018F0 push    1
+.text:100018F2 call    ds:UF_UI_unlock_ug_access
+.text:100018F8 add     esp, 40h
+.text:100018FB
+.text:100018FB loc_100018FB:
+.text:100018FB mov     edx, [ebp+arg_C]
+.text:100018FE mov     dword ptr [esp+238h+var_228], offset aInput_retract_ ; "INPUT_RETRACT_DIST"
+.text:10001906 mov     eax, [edx+4]
+.text:10001909
+.text:10001909 loc_10001909:
+.text:10001909 mov     cl, [eax]
+.text:1000190B mov     edx, dword ptr [esp+238h+var_228]
+.text:1000190F mov     [esp+238h+var_229], cl
+.text:10001913 cmp     cl, [edx]
+.text:10001915 jnz     short loc_10001939
+.text:10001917 test    cl, cl
+.text:10001919 jz      short loc_10001935
+.text:1000191B mov     cl, [eax+1]
+.text:1000191E mov     [esp+238h+var_229], cl
+.text:10001922 cmp     cl, [edx+1]
+.text:10001925 jnz     short loc_10001939
+.text:10001927 add     eax, 2
+.text:1000192A add     edx, 2
+.text:1000192D test    cl, cl
+.text:1000192F mov     dword ptr [esp+238h+var_228], edx
+.text:10001933 jnz     short loc_10001909
+.text:10001935
+.text:10001935 loc_10001935:
+.text:10001935 xor     eax, eax
+.text:10001937 jmp     short loc_1000193E
+.text:10001939
+.text:10001939 loc_10001939:
+.text:10001939 sbb     eax, eax
+.text:1000193B sbb     eax, 0FFFFFFFFh
+.text:1000193E
+.text:1000193E loc_1000193E:
+.text:1000193E test    eax, eax
+.text:10001940 jnz     loc_10001B4E
+.text:10001946 push    eax
+.text:10001947 push    offset unk_10003278
+.text:1000194C call    ds:uc1601
+.text:10001952 lea     eax, [esp+240h+var_170]
+.text:10001959 push    eax
+.text:1000195A push    offset a0       ; "0"
+.text:1000195F push    offset aPrev_mcs_goto ; "prev_mcs_goto"
+.text:10001964 push    esi
+.text:10001965 call    edi ; UF_MOM_ask_assoc_double_array
+.text:10001967 lea     ecx, [esp+250h+var_168]
+.text:1000196E push    ecx
+.text:1000196F push    offset a1       ; "1"
+.text:10001974 push    offset aPrev_mcs_goto ; "prev_mcs_goto"
+.text:10001979 push    esi
+.text:1000197A call    edi ; UF_MOM_ask_assoc_double_array
+.text:1000197C lea     edx, [esp+260h+var_160]
+.text:10001983 push    edx
+.text:10001984 push    offset a2       ; "2"
+.text:10001989 push    offset aPrev_mcs_goto ; "prev_mcs_goto"
+.text:1000198E push    esi
+.text:1000198F call    edi ; UF_MOM_ask_assoc_double_array
+.text:10001991 lea     eax, [esp+270h+var_1C8]
+.text:10001998 push    eax
+.text:10001999 push    offset a0       ; "0"
+.text:1000199E push    offset aPrev_tool_axis ;	"prev_tool_axis"
+.text:100019A3 push    esi
+.text:100019A4 call    edi ; UF_MOM_ask_assoc_double_array
+.text:100019A6 add     esp, 48h
+.text:100019A9 lea     ecx, [esp+238h+var_1C0]
+.text:100019AD push    ecx
+.text:100019AE push    offset a1       ; "1"
+.text:100019B3 push    offset aPrev_tool_axis ;	"prev_tool_axis"
+.text:100019B8 push    esi
+.text:100019B9 call    edi ; UF_MOM_ask_assoc_double_array
+.text:100019BB lea     edx, [esp+248h+var_1B8]
+.text:100019C2 push    edx
+.text:100019C3 push    offset a2       ; "2"
+.text:100019C8 push    offset aPrev_tool_axis ;	"prev_tool_axis"
+.text:100019CD push    esi
+.text:100019CE call    edi ; UF_MOM_ask_assoc_double_array
+.text:100019D0 mov     edi, ds:UF_MOM_ask_string
+.text:100019D6 lea     eax, [esp+258h+String]
+.text:100019DA push    eax
+.text:100019DB push    offset aKin_retract_di ;	"kin_retract_distance"
+.text:100019E0 push    esi
+.text:100019E1 call    edi ; UF_MOM_ask_string
+.text:100019E3 lea     ecx, [esp+264h+var_1CC]
+.text:100019EA push    ecx
+.text:100019EB push    offset aKin_reengage_d ;	"kin_reengage_distance"
+.text:100019F0 push    esi
+.text:100019F1 call    edi ; UF_MOM_ask_string
+.text:100019F3 mov     edx, [esp+270h+String]
+.text:100019FA push    edx	       ; String
+.text:100019FB call    ds:atof
+.text:10001A01 mov     eax, [esp+274h+var_1CC]
+.text:10001A08 fstp    [esp+274h+var_228]
+.text:10001A0C push    eax	       ; String
+.text:10001A0D call    ds:atof
+.text:10001A13 mov     ecx, [esp+278h+String]
+.text:10001A1A add     esp, 40h
+.text:10001A1D fstp    [esp+238h+var_1D8]
+.text:10001A21 push    ecx
+.text:10001A22 call    ds:UF_free
+.text:10001A28 fld     [esp+23Ch+var_1C8]
+.text:10001A2C fmul    [esp+23Ch+var_228]
+.text:10001A30 fadd    [esp+23Ch+var_170]
+.text:10001A37 fstp    [esp+23Ch+var_21C]
+.text:10001A3B fld     [esp+23Ch+var_1C0]
+.text:10001A3F fmul    [esp+23Ch+var_228]
+.text:10001A43 fadd    [esp+23Ch+var_168]
+.text:10001A4A fstp    [esp+23Ch+var_214]
+.text:10001A4E fld     [esp+23Ch+var_1B8]
+.text:10001A55 fmul    [esp+23Ch+var_228]
+.text:10001A59 fadd    [esp+23Ch+var_160]
+.text:10001A60 fstp    [esp+23Ch+var_20C]
+.text:10001A64 fld     [esp+23Ch+var_1C8]
+.text:10001A68 fmul    [esp+23Ch+var_1D8]
+.text:10001A6C fadd    [esp+23Ch+var_170]
+.text:10001A73 mov     edx, dword ptr [esp+23Ch+var_21C+4]
+.text:10001A77 mov     eax, dword ptr [esp+23Ch+var_21C]
+.text:10001A7B push    edx
+.text:10001A7C push    eax
+.text:10001A7D push    offset a0       ; "0"
+.text:10001A82 push    offset aPos     ; "pos"
+.text:10001A87 fstp    [esp+24Ch+var_1B0]
+.text:10001A8E fld     [esp+24Ch+var_1C0]
+.text:10001A95 fmul    [esp+24Ch+var_1D8]
+.text:10001A99 push    esi
+.text:10001A9A fadd    [esp+250h+var_168]
+.text:10001AA1 fstp    [esp+250h+var_1A8]
+.text:10001AA8 fld     [esp+250h+var_1B8]
+.text:10001AAF fmul    [esp+250h+var_1D8]
+.text:10001AB3 fadd    [esp+250h+var_160]
+.text:10001ABA fstp    [esp+250h+var_1A0]
+.text:10001AC1 call    ebx ; UF_MOM_set_assoc_double_array
+.text:10001AC3 mov     ecx, dword ptr [esp+250h+var_214+4]
+.text:10001AC7 mov     edx, dword ptr [esp+250h+var_214]
+.text:10001ACB push    ecx
+.text:10001ACC push    edx
+.text:10001ACD push    offset a1       ; "1"
+.text:10001AD2 push    offset aPos     ; "pos"
+.text:10001AD7 push    esi
+.text:10001AD8 call    ebx ; UF_MOM_set_assoc_double_array
+.text:10001ADA mov     eax, dword ptr [esp+264h+var_20C+4]
+.text:10001ADE mov     ecx, dword ptr [esp+264h+var_20C]
+.text:10001AE2 push    eax
+.text:10001AE3 push    ecx
+.text:10001AE4 push    offset a2       ; "2"
+.text:10001AE9 push    offset aPos     ; "pos"
+.text:10001AEE push    esi
+.text:10001AEF call    ebx ; UF_MOM_set_assoc_double_array
+.text:10001AF1 mov     edx, dword ptr [esp+278h+var_1B0+4]
+.text:10001AF8 mov     eax, dword ptr [esp+278h+var_1B0]
+.text:10001AFF add     esp, 40h
+.text:10001B02 push    edx
+.text:10001B03 push    eax
+.text:10001B04 push    offset a0       ; "0"
+.text:10001B09 push    offset aPos_reen	; "pos_reen"
+.text:10001B0E push    esi
+.text:10001B0F call    ebx ; UF_MOM_set_assoc_double_array
+.text:10001B11 mov     ecx, dword ptr [esp+24Ch+var_1A8+4]
+.text:10001B18 mov     edx, dword ptr [esp+24Ch+var_1A8]
+.text:10001B1F push    ecx
+.text:10001B20 push    edx
+.text:10001B21 push    offset a1       ; "1"
+.text:10001B26 push    offset aPos_reen	; "pos_reen"
+.text:10001B2B push    esi
+.text:10001B2C call    ebx ; UF_MOM_set_assoc_double_array
+.text:10001B2E mov     eax, dword ptr [esp+260h+var_1A0+4]
+.text:10001B35 mov     ecx, dword ptr [esp+260h+var_1A0]
+.text:10001B3C push    eax
+.text:10001B3D push    ecx
+.text:10001B3E push    offset a2       ; "2"
+.text:10001B43 push    offset aPos_reen	; "pos_reen"
+.text:10001B48 push    esi
+.text:10001B49 call    ebx ; UF_MOM_set_assoc_double_array
+.text:10001B4B add     esp, 3Ch
+.text:10001B4E
+.text:10001B4E loc_10001B4E:
+.text:10001B4E mov     edx, [ebp+arg_C]
+.text:10001B51 mov     edi, offset aUnload ; "UNLOAD"
+.text:10001B56 mov     eax, [edx+4]
+.text:10001B59
+.text:10001B59 loc_10001B59:
+.text:10001B59 mov     dl, [eax]
+.text:10001B5B mov     bl, [edi]
+.text:10001B5D mov     cl, dl
+.text:10001B5F cmp     dl, bl
+.text:10001B61 jnz     short loc_10001B81
+.text:10001B63 test    cl, cl
+.text:10001B65 jz      short loc_10001B7D
+.text:10001B67 mov     dl, [eax+1]
+.text:10001B6A mov     bl, [edi+1]
+.text:10001B6D mov     cl, dl
+.text:10001B6F cmp     dl, bl
+.text:10001B71 jnz     short loc_10001B81
+.text:10001B73 add     eax, 2
+.text:10001B76 add     edi, 2
+.text:10001B79 test    cl, cl
+.text:10001B7B jnz     short loc_10001B59
+.text:10001B7D
+.text:10001B7D loc_10001B7D:
+.text:10001B7D xor     eax, eax
+.text:10001B7F jmp     short loc_10001B86
+.text:10001B81
+.text:10001B81 loc_10001B81:
+.text:10001B81 sbb     eax, eax
+.text:10001B83 sbb     eax, 0FFFFFFFFh
+.text:10001B86
+.text:10001B86 loc_10001B86:
+.text:10001B86 test    eax, eax
+.text:10001B88 jnz     short loc_10001B8F
+.text:10001B8A mov     dword_100037C4, eax
+.text:10001B8F
+.text:10001B8F loc_10001B8F:
+.text:10001B8F lea     eax, [esp+238h+Dest]
+.text:10001B96 lea     ecx, [esp+238h+var_24]
+.text:10001B9D push    eax
+.text:10001B9E push    ecx
+.text:10001B9F push    esi
+.text:10001BA0 call    ds:UF_MOM_set_string
+.text:10001BA6 add     esp, 0Ch
+.text:10001BA9 call    ds:UF_terminate
+.text:10001BAF pop     edi
+.text:10001BB0 pop     esi
+.text:10001BB1 xor     eax, eax
+.text:10001BB3 pop     ebx
+.text:10001BB4 mov     esp, ebp
+.text:10001BB6 pop     ebp
+.text:10001BB7 retn
+.text:10001BB7 sub_10001090 endp
+.text:10001BB7
+.text:10001BB8 align 10h
+.text:10001BC0 ; Exported entry	  3. ufusr_ask_unload
+.text:10001BC0
+.text:10001BC0
+.text:10001BC0
+.text:10001BC0 public ufusr_ask_unload
+.text:10001BC0 ufusr_ask_unload	proc near
+.text:10001BC0 mov     eax, 3
+.text:10001BC5 retn
+.text:10001BC5 ufusr_ask_unload	endp
+.text:10001BC5
+.text:10001BC6 align 10h
+.text:10001BD0
+.text:10001BD0
+.text:10001BD0
+.text:10001BD0 sub_10001BD0 proc near
+.text:10001BD0
+.text:10001BD0 var_1C= dword ptr -1Ch
+.text:10001BD0 var_18= dword ptr -18h
+.text:10001BD0 var_14= dword ptr -14h
+.text:10001BD0 var_10= byte ptr	-10h
+.text:10001BD0 var_C= byte ptr -0Ch
+.text:10001BD0 var_8= byte ptr -8
+.text:10001BD0 var_4= byte ptr -4
+.text:10001BD0
+.text:10001BD0 sub     esp, 1Ch
+.text:10001BD3 push    ebx
+.text:10001BD4 push    esi
+.text:10001BD5 push    edi
+.text:10001BD6 mov     esi, 7FFD4240h
+.text:10001BDB mov     [esp+28h+var_1C], 0
+.text:10001BE3 call    ds:UF_ASSEM_ask_work_part
+.text:10001BE9 mov     edi, eax
+.text:10001BEB lea     eax, [esp+28h+var_1C]
+.text:10001BEF push    eax
+.text:10001BF0 call    ds:UF_PART_create_history_list
+.text:10001BF6 mov     ecx, [esp+2Ch+var_1C]
+.text:10001BFA push    ecx
+.text:10001BFB push    edi
+.text:10001BFC call    ds:UF_PART_ask_part_history
+.text:10001C02 mov     eax, [esp+34h+var_1C]
+.text:10001C06 lea     edx, [esp+34h+var_18]
+.text:10001C0A push    edx
+.text:10001C0B push    eax
+.text:10001C0C call    ds:UF_PART_ask_num_histories
+.text:10001C12 mov     eax, [esp+3Ch+var_18]
+.text:10001C16 add     esp, 14h
+.text:10001C19 xor     edi, edi
+.text:10001C1B test    eax, eax
+.text:10001C1D jle     short loc_10001C63
+.text:10001C1F mov     ebx, ds:UF_PART_ask_nth_history
+.text:10001C25
+.text:10001C25 loc_10001C25:
+.text:10001C25 lea     ecx, [esp+28h+var_14]
+.text:10001C29 lea     edx, [esp+28h+var_10]
+.text:10001C2D push    ecx
+.text:10001C2E lea     eax, [esp+2Ch+var_C]
+.text:10001C32 push    edx
+.text:10001C33 lea     ecx, [esp+30h+var_8]
+.text:10001C37 push    eax
+.text:10001C38 mov     eax, [esp+34h+var_1C]
+.text:10001C3C lea     edx, [esp+34h+var_4]
+.text:10001C40 push    ecx
+.text:10001C41 push    edx
+.text:10001C42 push    edi
+.text:10001C43 push    eax
+.text:10001C44 call    ebx ; UF_PART_ask_nth_history
+.text:10001C46 mov     eax, [esp+44h+var_14]
+.text:10001C4A add     esp, 1Ch
+.text:10001C4D cmp     eax, esi
+.text:10001C4F jg      short loc_10001C9F
+.text:10001C51 cmp     eax, 50E161ACh
+.text:10001C56 mov     esi, eax
+.text:10001C58 jg      short loc_10001C81
+.text:10001C5A mov     eax, [esp+28h+var_18]
+.text:10001C5E inc     edi
+.text:10001C5F cmp     edi, eax
+.text:10001C61 jl      short loc_10001C25
+.text:10001C63
+.text:10001C63 loc_10001C63:
+.text:10001C63 mov     eax, [esp+28h+var_1C]
+.text:10001C67 test    eax, eax
+.text:10001C69 jz      short loc_10001C75
+.text:10001C6B push    eax
+.text:10001C6C call    ds:UF_PART_delete_history_list
+.text:10001C72 add     esp, 4
+.text:10001C75
+.text:10001C75 loc_10001C75:
+.text:10001C75 pop     edi
+.text:10001C76 pop     esi
+.text:10001C77 mov     eax, 1
+.text:10001C7C pop     ebx
+.text:10001C7D add     esp, 1Ch
+.text:10001C80 retn
+.text:10001C81
+.text:10001C81 loc_10001C81:
+.text:10001C81 push    0
+.text:10001C83 push    offset aWww_csoft_ru ; "www.csoft.ru"
+.text:10001C88 push    offset aCsoft2011 ; "CSOFT 2011"
+.text:10001C8D call    ds:UF_UI_display_nonmodal_msg
+.text:10001C93 add     esp, 0Ch
+.text:10001C96 xor     eax, eax
+.text:10001C98 pop     edi
+.text:10001C99 pop     esi
+.text:10001C9A pop     ebx
+.text:10001C9B add     esp, 1Ch
+.text:10001C9E retn
+.text:10001C9F
+.text:10001C9F loc_10001C9F:
+.text:10001C9F push    1
+.text:10001CA1 push    offset unk_10003768
+.text:10001CA6 call    ds:uc1601
+.text:10001CAC add     esp, 8
+.text:10001CAF xor     eax, eax
+.text:10001CB1 pop     edi
+.text:10001CB2 pop     esi
+.text:10001CB3 pop     ebx
+.text:10001CB4 add     esp, 1Ch
+.text:10001CB7 retn
+.text:10001CB7 sub_10001BD0 endp
+.text:10001CB7
+.text:10001CB8 align 10h
+.text:10001CC0 ; [000000AB BYTES: COLLAPSED FUNCTION _CRT_INIT(x,x,x). PRESS KEYPAD "+"	TO EXPAND]
+.text:10001D6B ; [0000009D BYTES: COLLAPSED FUNCTION DllEntryPoint. PRESS KEYPAD "+" TO	EXPAND]
+.text:10001E08 ; [00000006 BYTES: COLLAPSED FUNCTION _initterm.	PRESS KEYPAD "+" TO EXPAND]
+.text:10001E0E
+.text:10001E0E
+.text:10001E0E
+.text:10001E0E ; BOOL __stdcall	DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
+.text:10001E0E _DllMain@12 proc	near
+.text:10001E0E
+.text:10001E0E hLibModule= dword ptr  4
+.text:10001E0E fdwReason= dword	ptr  8
+.text:10001E0E lpvReserved= dword ptr  0Ch
+.text:10001E0E
+.text:10001E0E cmp     [esp+fdwReason],	1
+.text:10001E13 jnz     short loc_10001E28
+.text:10001E15 cmp     dword_100037D8, 0
+.text:10001E1C jnz     short loc_10001E28
+.text:10001E1E push    [esp+hLibModule]	; hLibModule
+.text:10001E22 call    ds:DisableThreadLibraryCalls
+.text:10001E28
+.text:10001E28 loc_10001E28:
+.text:10001E28 push    1
+.text:10001E2A pop     eax
+.text:10001E2B retn    0Ch
+.text:10001E2B _DllMain@12 endp
+.text:10001E2B
+.text:10001E2E align 200h
+.text:10001E2E _text ends
+.text:10001E2E
+.idata:10002000	; Section 2. (virtual address 00002000)
+.idata:10002000	; Virtual size			: 000004F1 (   1265.)
+.idata:10002000	; Section size in file		: 00001000 (   4096.)
+.idata:10002000	; Offset to raw	data for section: 00002000
+.idata:10002000	; Flags	40000040: Data Readable
+.idata:10002000	; Alignment	: default
+.idata:10002000	;
+.idata:10002000	; Imports from KERNEL32.dll
+.idata:10002000	;
+.idata:10002000
+.idata:10002000	; Segment type:	Externs
+.idata:10002000	; _idata
+.idata:10002000	; BOOL __stdcall DisableThreadLibraryCalls(HMODULE hLibModule)
+.idata:10002000	extrn DisableThreadLibraryCalls:dword
+.idata:10002004
+.idata:10002008	;
+.idata:10002008	; Imports from MSVCRT.dll
+.idata:10002008	;
+.idata:10002008	; double __cdecl atof(const char *String)
+.idata:10002008	extrn atof:dword
+.idata:1000200C	; void *__cdecl	malloc(size_t Size)
+.idata:1000200C	extrn malloc:dword
+.idata:10002010	; void __cdecl free(void *Memory)
+.idata:10002010	extrn free:dword
+.idata:10002014	extrn _adjust_fdiv:dword
+.idata:10002018	; int sprintf(char *Dest, const	char *Format, ...)
+.idata:10002018	extrn sprintf:dword
+.idata:1000201C	extrn __imp__initterm:dword
+.idata:10002020
+.idata:10002024	;
+.idata:10002024	; Imports from libufun.dll
+.idata:10002024	;
+.idata:10002024	extrn UF_MOM_set_assoc_double_array:dword
+.idata:10002028	extrn UF_MOM_execute_command:dword
+.idata:1000202C	extrn UF_MOM_ask_assoc_double_array:dword
+.idata:10002030	extrn UF_PART_delete_history_list:dword
+.idata:10002034	extrn UF_UI_close_listing_window:dword
+.idata:10002038	extrn UF_PART_ask_num_histories:dword
+.idata:1000203C	extrn UF_PART_ask_part_history:dword
+.idata:10002040	extrn UF_PART_create_history_list:dword
+.idata:10002044	extrn UF_ASSEM_ask_work_part:dword
+.idata:10002048	extrn UF_MOM_set_double:dword
+.idata:1000204C	extrn UF_MOM_ask_string:dword
+.idata:10002050	extrn UF_free:dword
+.idata:10002054	extrn UF_MOM_set_string:dword
+.idata:10002058	extrn UF_is_initialized:dword
+.idata:1000205C	extrn UF_initialize:dword
+.idata:10002060	extrn UF_MOM_ask_interp_from_param:dword
+.idata:10002064	extrn UF_MOM_ask_mom:dword
+.idata:10002068	extrn UF_MOM_extend_xlator:dword
+.idata:1000206C	extrn UF_PART_ask_nth_history:dword
+.idata:10002070	extrn UF_terminate:dword
+.idata:10002074
+.idata:10002078	;
+.idata:10002078	; Imports from libugopenint.dll
+.idata:10002078	;
+.idata:10002078	extrn UF_UI_lock_ug_access:dword
+.idata:1000207C	extrn uc1608:dword
+.idata:10002080	extrn UF_UI_unlock_ug_access:dword
+.idata:10002084	extrn uc1601:dword
+.idata:10002088	extrn UF_UI_display_nonmodal_msg:dword
+.idata:1000208C
+.idata:1000208C
+.rdata:10002090
+.rdata:10002090	; Segment type:	Pure data
+.rdata:10002090	; Segment permissions: Read
+.rdata:10002090	_rdata segment para public 'DATA' use32
+.rdata:10002090	assume cs:_rdata
+.rdata:10002090	;org 10002090h
+.rdata:10002090	__IMPORT_DESCRIPTOR_libufun dd rva off_10002118	; Import Name Table
+.rdata:10002094	dd 0			; Time stamp
+.rdata:10002098	dd 0			; Forwarder Chain
+.rdata:1000209C	dd rva aLibufun_dll	; DLL Name
+.rdata:100020A0	dd rva UF_MOM_set_assoc_double_array ; Import Address Table
+.rdata:100020A4	__IMPORT_DESCRIPTOR_libugopenint dd rva	off_1000216C ; Import Name Table
+.rdata:100020A8	dd 0			; Time stamp
+.rdata:100020AC	dd 0			; Forwarder Chain
+.rdata:100020B0	dd rva aLibugopenint_d	; DLL Name
+.rdata:100020B4	dd rva UF_UI_lock_ug_access ; Import Address Table
+.rdata:100020B8	__IMPORT_DESCRIPTOR_MSVCRT dd rva off_100020FC ; Import	Name Table
+.rdata:100020BC	dd 0			; Time stamp
+.rdata:100020C0	dd 0			; Forwarder Chain
+.rdata:100020C4	dd rva aMsvcrt_dll	; DLL Name
+.rdata:100020C8	dd rva atof		; Import Address Table
+.rdata:100020CC	__IMPORT_DESCRIPTOR_KERNEL32 dd	rva off_100020F4 ; Import Name Table
+.rdata:100020D0	dd 0			; Time stamp
+.rdata:100020D4	dd 0			; Forwarder Chain
+.rdata:100020D8	dd rva aKernel32_dll	; DLL Name
+.rdata:100020DC	dd rva DisableThreadLibraryCalls ; Import Address Table
+.rdata:100020E0	db    0
+.rdata:100020E1	db    0
+.rdata:100020E2	db    0
+.rdata:100020E3	db    0
+.rdata:100020E4	db    0
+.rdata:100020E5	db    0
+.rdata:100020E6	db    0
+.rdata:100020E7	db    0
+.rdata:100020E8	db    0
+.rdata:100020E9	db    0
+.rdata:100020EA	db    0
+.rdata:100020EB	db    0
+.rdata:100020EC	db    0
+.rdata:100020ED	db    0
+.rdata:100020EE	db    0
+.rdata:100020EF	db    0
+.rdata:100020F0	db    0
+.rdata:100020F1	db    0
+.rdata:100020F2	db    0
+.rdata:100020F3	db    0
+.rdata:100020F4	;
+.rdata:100020F4	; Import names for KERNEL32.dll
+.rdata:100020F4	;
+.rdata:100020F4	off_100020F4 dd	rva word_10002436
+.rdata:100020F8	dd 0
+.rdata:100020FC	;
+.rdata:100020FC	; Import names for MSVCRT.dll
+.rdata:100020FC	;
+.rdata:100020FC	off_100020FC dd	rva word_100023EA
+.rdata:10002100	dd rva word_1000241C
+.rdata:10002104	dd rva word_10002408
+.rdata:10002108	dd rva word_10002426
+.rdata:1000210C	dd rva word_100023F2
+.rdata:10002110	dd rva word_10002410
+.rdata:10002114	dd 0
+.rdata:10002118	;
+.rdata:10002118	; Import names for libufun.dll
+.rdata:10002118	;
+.rdata:10002118	off_10002118 dd	rva word_10002266
+.rdata:1000211C	dd rva word_10002286
+.rdata:10002120	dd rva word_100022A0
+.rdata:10002124	dd rva word_100022C0
+.rdata:10002128	dd rva word_10002248
+.rdata:1000212C	dd rva word_100022F8
+.rdata:10002130	dd rva word_10002314
+.rdata:10002134	dd rva word_10002330
+.rdata:10002138	dd rva word_1000234E
+.rdata:1000213C	dd rva word_10002234
+.rdata:10002140	dd rva word_10002220
+.rdata:10002144	dd rva word_10002216
+.rdata:10002148	dd rva word_10002202
+.rdata:1000214C	dd rva word_100021EE
+.rdata:10002150	dd rva word_100021DE
+.rdata:10002154	dd rva word_100021BE
+.rdata:10002158	dd rva word_100021AC
+.rdata:1000215C	dd rva word_10002194
+.rdata:10002160	dd rva word_100022DE
+.rdata:10002164	dd rva word_10002184
+.rdata:10002168	dd 0
+.rdata:1000216C	;
+.rdata:1000216C	; Import names for libugopenint.dll
+.rdata:1000216C	;
+.rdata:1000216C	off_1000216C dd	rva word_100023A2
+.rdata:10002170	dd rva word_10002398
+.rdata:10002174	dd rva word_1000237E
+.rdata:10002178	dd rva word_10002374
+.rdata:1000217C	dd rva word_100023BA
+.rdata:10002180	dd 0
+.rdata:10002184	word_10002184 dw 1446h
+.rdata:10002186	db 'UF_terminate',0
+.rdata:10002193	align 4
+.rdata:10002194	word_10002194 dw 0A44h
+.rdata:10002196	db 'UF_MOM_extend_xlator',0
+.rdata:100021AB	align 4
+.rdata:100021AC	word_100021AC dw 0A40h
+.rdata:100021AE	db 'UF_MOM_ask_mom',0
+.rdata:100021BD	align 2
+.rdata:100021BE	word_100021BE dw 0A3Fh
+.rdata:100021C0	db 'UF_MOM_ask_interp_from_param',0
+.rdata:100021DD	align 2
+.rdata:100021DE	word_100021DE dw 143Ah
+.rdata:100021E0	db 'UF_initialize',0
+.rdata:100021EE	word_100021EE dw 143Bh
+.rdata:100021F0	db 'UF_is_initialized',0
+.rdata:10002202	word_10002202 dw 0A4Ch
+.rdata:10002204	db 'UF_MOM_set_string',0
+.rdata:10002216	word_10002216 dw 1432h
+.rdata:10002218	db 'UF_free',0
+.rdata:10002220	word_10002220 dw 0A41h
+.rdata:10002222	db 'UF_MOM_ask_string',0
+.rdata:10002234	word_10002234 dw 0A48h
+.rdata:10002236	db 'UF_MOM_set_double',0
+.rdata:10002248	word_10002248 dw 1310h
+.rdata:1000224A	db 'UF_UI_close_listing_window',0
+.rdata:10002265	align 2
+.rdata:10002266	word_10002266 dw 0A45h
+.rdata:10002268	db 'UF_MOM_set_assoc_double_array',0
+.rdata:10002286	word_10002286 dw 0A43h
+.rdata:10002288	db 'UF_MOM_execute_command',0
+.rdata:1000229F	align 10h
+.rdata:100022A0	word_100022A0 dw 0A39h
+.rdata:100022A2	db 'UF_MOM_ask_assoc_double_array',0
+.rdata:100022C0	word_100022C0 dw 0C7Fh
+.rdata:100022C2	db 'UF_PART_delete_history_list',0
+.rdata:100022DE	word_100022DE dw 0C6Bh
+.rdata:100022E0	db 'UF_PART_ask_nth_history',0
+.rdata:100022F8	word_100022F8 dw 0C6Dh
+.rdata:100022FA	db 'UF_PART_ask_num_histories',0
+.rdata:10002314	word_10002314 dw 0C6Fh
+.rdata:10002316	db 'UF_PART_ask_part_history',0
+.rdata:1000232F	align 10h
+.rdata:10002330	word_10002330 dw 0C7Eh
+.rdata:10002332	db 'UF_PART_create_history_list',0
+.rdata:1000234E	word_1000234E dw 65h
+.rdata:10002350	db 'UF_ASSEM_ask_work_part',0
+.rdata:10002367	align 4
+.rdata:10002368	aLibufun_dll db	'libufun.dll',0
+.rdata:10002374	word_10002374 dw 13Ch
+.rdata:10002376	db 'uc1601',0
+.rdata:1000237D	align 2
+.rdata:1000237E	word_1000237E dw 11Bh
+.rdata:10002380	db 'UF_UI_unlock_ug_access',0
+.rdata:10002397	align 4
+.rdata:10002398	word_10002398 dw 140h
+.rdata:1000239A	db 'uc1608',0
+.rdata:100023A1	align 2
+.rdata:100023A2	word_100023A2 dw 0F0h
+.rdata:100023A4	db 'UF_UI_lock_ug_access',0
+.rdata:100023B9	align 2
+.rdata:100023BA	word_100023BA dw 0E5h
+.rdata:100023BC	db 'UF_UI_display_nonmodal_msg',0
+.rdata:100023D7	align 4
+.rdata:100023D8	aLibugopenint_d	db 'libugopenint.dll',0
+.rdata:100023E9	align 2
+.rdata:100023EA	word_100023EA dw 23Ch
+.rdata:100023EC	db 'atof',0
+.rdata:100023F1	align 2
+.rdata:100023F2	word_100023F2 dw 2B2h
+.rdata:100023F4	db 'sprintf',0
+.rdata:100023FC	aMsvcrt_dll db 'MSVCRT.dll',0
+.rdata:10002407	align 4
+.rdata:10002408	word_10002408 dw 25Eh
+.rdata:1000240A	db 'free',0
+.rdata:1000240F	align 10h
+.rdata:10002410	word_10002410 dw 10Fh
+.rdata:10002412	db '_initterm',0
+.rdata:1000241C	word_1000241C dw 291h
+.rdata:1000241E	db 'malloc',0
+.rdata:10002425	align 2
+.rdata:10002426	word_10002426 dw 9Dh
+.rdata:10002428	db '_adjust_fdiv',0
+.rdata:10002435	align 2
+.rdata:10002436	word_10002436 dw 5Dh
+.rdata:10002438	db 'DisableThreadLibraryCalls',0
+.rdata:10002452	aKernel32_dll db 'KERNEL32.dll',0
+.rdata:1000245F	align 10h
+.rdata:10002460	;
+.rdata:10002460	; Export directory for mom_user.dll
+.rdata:10002460	;
+.rdata:10002460	dd 0			; Characteristics
+.rdata:10002464	dd 50A2402Dh		; TimeDateStamp: Tue Nov 13 18:42:21 2012
+.rdata:10002468	dw 0			; MajorVersion
+.rdata:1000246A	dw 0			; MinorVersion
+.rdata:1000246C	dd rva aMom_user_dll	; Name
+.rdata:10002470	dd 1			; Base
+.rdata:10002474	dd 3			; NumberOfFunctions
+.rdata:10002478	dd 3			; NumberOfNames
+.rdata:1000247C	dd rva off_10002488	; AddressOfFunctions
+.rdata:10002480	dd rva off_10002494	; AddressOfNames
+.rdata:10002484	dd rva word_100024A0	; AddressOfNameOrdinals
+.rdata:10002488	;
+.rdata:10002488	; Export Address Table for mom_user.dll
+.rdata:10002488	;
+.rdata:10002488	off_10002488 dd	rva NXSigningResource, rva entry_rtv_mom_cp_part_attr
+.rdata:10002488	dd rva ufusr_ask_unload
+.rdata:10002494	;
+.rdata:10002494	; Export Names Table for mom_user.dll
+.rdata:10002494	;
+.rdata:10002494	off_10002494 dd	rva aNxsigningresou, rva aEntry_rtv_mom_ ; "NXSigningResource"
+.rdata:10002494	dd rva aUfusr_ask_unlo
+.rdata:100024A0	;
+.rdata:100024A0	; Export Ordinals Table	for mom_user.dll
+.rdata:100024A0	;
+.rdata:100024A0	word_100024A0 dw 0, 1, 2
+.rdata:100024A6	aMom_user_dll db 'mom_user.dll',0
+.rdata:100024B3	aNxsigningresou	db 'NXSigningResource',0
+.rdata:100024C5	aEntry_rtv_mom_	db 'entry_rtv_mom_cp_part_attr',0
+.rdata:100024E0	aUfusr_ask_unlo	db 'ufusr_ask_unload',0
+.rdata:100024F1	align 1000h
+.rdata:100024F1	_rdata ends
+.rdata:100024F1
+.data:10003000 ; Section 3. (virtual address 00003000)
+.data:10003000 ; Virtual size		       : 000007DC (   2012.)
+.data:10003000 ; Section size in file	       : 00001000 (   4096.)
+.data:10003000 ; Offset	to raw data for	section: 00003000
+.data:10003000 ; Flags C0000040: Data Readable Writable
+.data:10003000 ; Alignment     : default
+.data:10003000
+.data:10003000 ; Segment type: Pure data
+.data:10003000 ; Segment permissions: Read/Write
+.data:10003000 _data segment para public 'DATA' use32
+.data:10003000 assume cs:_data
+.data:10003000 ;org 10003000h
+.data:10003000 unk_10003000 db	  0
+.data:10003001 db    0
+.data:10003002 db    0
+.data:10003003 db    0
+.data:10003004 unk_10003004 db	  0
+.data:10003005 db    0
+.data:10003006 db    0
+.data:10003007 db    0
+.data:10003008 db    0
+.data:10003009 db    0
+.data:1000300A db    0
+.data:1000300B db    0
+.data:1000300C db    0
+.data:1000300D db    0
+.data:1000300E db    0
+.data:1000300F db    0
+.data:10003010 db  4Eh ; N
+.data:10003011 db  58h ; X
+.data:10003012 db  41h ; A
+.data:10003013 db  55h ; U
+.data:10003014 db  54h ; T
+.data:10003015 db  48h ; H
+.data:10003016 db  42h ; B
+.data:10003017 db  4Ch ; L
+.data:10003018 db  4Fh ; O
+.data:10003019 db  43h ; C
+.data:1000301A db  4Bh ; K
+.data:1000301B db  2Dh ; -
+.data:1000301C db    1
+.data:1000301D db  31h ; 1
+.data:1000301E db  20h
+.data:1000301F db  31h ; 1
+.data:10003020 db  33h ; 3
+.data:10003021 db  30h ; 0
+.data:10003022 db  36h ; 6
+.data:10003023 db  33h ; 3
+.data:10003024 db  38h ; 8
+.data:10003025 db  34h ; 4
+.data:10003026 db  20h
+.data:10003027 db  2Dh ; -
+.data:10003028 db  20h
+.data:10003029 db  43h ; C
+.data:1000302A db  4Ah ; J
+.data:1000302B db  53h ; S
+.data:1000302C db  43h ; C
+.data:1000302D db  20h
+.data:1000302E db  43h ; C
+.data:1000302F db  6Fh ; o
+.data:10003030 db  6Eh ; n
+.data:10003031 db  73h ; s
+.data:10003032 db  75h ; u
+.data:10003033 db  6Ch ; l
+.data:10003034 db  74h ; t
+.data:10003035 db  69h ; i
+.data:10003036 db  6Eh ; n
+.data:10003037 db  67h ; g
+.data:10003038 db  20h
+.data:10003039 db  67h ; g
+.data:1000303A db  72h ; r
+.data:1000303B db  6Fh ; o
+.data:1000303C db  75h ; u
+.data:1000303D db  70h ; p
+.data:1000303E db  20h
+.data:1000303F db  57h ; W
+.data:10003040 db  46h ; F
+.data:10003041 db  45h ; E
+.data:10003042 db  5Ah ; Z
+.data:10003043 db  47h ; G
+.data:10003044 db  5Ah ; Z
+.data:10003045 db  51h ; Q
+.data:10003046 db  41h ; A
+.data:10003047 db  53h ; S
+.data:10003048 db  43h ; C
+.data:10003049 db  57h ; W
+.data:1000304A db  30h ; 0
+.data:1000304B db  55h ; U
+.data:1000304C db    2
+.data:1000304D db  29h ; )
+.data:1000304E db    0
+.data:1000304F db 0C4h ; Д
+.data:10003050 db 0EDh ; н
+.data:10003051 db  40h ; @
+.data:10003052 db  50h ; P
+.data:10003053 db 0D2h ; Т
+.data:10003054 db 0ADh ; ­
+.data:10003055 db  76h ; v
+.data:10003056 db  0Eh
+.data:10003057 db  2Fh ; /
+.data:10003058 db  90h ; ђ
+.data:10003059 db  85h ; …
+.data:1000305A db  91h ; ‘
+.data:1000305B db 0B0h ; °
+.data:1000305C db 0D3h ; У
+.data:1000305D db 0A3h ; Ј
+.data:1000305E db  71h ; q
+.data:1000305F db  4Fh ; O
+.data:10003060 db 0A6h ; ¦
+.data:10003061 db 0B9h ; №
+.data:10003062 db 0C0h ; А
+.data:10003063 db  43h ; C
+.data:10003064 db  3Eh ; >
+.data:10003065 db  9Bh ; ›
+.data:10003066 db  3Bh ; ;
+.data:10003067 db  46h ; F
+.data:10003068 db    8
+.data:10003069 db  2Ch ; ,
+.data:1000306A db  16h
+.data:1000306B db  8Ah ; Љ
+.data:1000306C db 0BDh ; Ѕ
+.data:1000306D db 0BAh ; є
+.data:1000306E db  30h ; 0
+.data:1000306F db  66h ; f
+.data:10003070 db  1Ch
+.data:10003071 db  64h ; d
+.data:10003072 db  66h ; f
+.data:10003073 db 0A7h ; §
+.data:10003074 db  54h ; T
+.data:10003075 db  4Ah ; J
+.data:10003076 db  90h ; ђ
+.data:10003077 db    2
+.data:10003078 db  28h ; (
+.data:10003079 db  52h ; R
+.data:1000307A db  26h ; &
+.data:1000307B db 0A8h ; Ё
+.data:1000307C db  6Eh ; n
+.data:1000307D db  3Ah ; :
+.data:1000307E db 0B7h ; ·
+.data:1000307F db  73h ; s
+.data:10003080 db  19h
+.data:10003081 db  99h ; ™
+.data:10003082 db  31h ; 1
+.data:10003083 db  48h ; H
+.data:10003084 db 0B6h ; ¶
+.data:10003085 db 0ADh ; ­
+.data:10003086 db  7Bh ; {
+.data:10003087 db 0CFh ; П
+.data:10003088 db  64h ; d
+.data:10003089 db  52h ; R
+.data:1000308A db  2Bh ; +
+.data:1000308B db 0F4h ; ф
+.data:1000308C db 0C3h ; Г
+.data:1000308D db  8Fh ; Џ
+.data:1000308E db  6Ch ; l
+.data:1000308F db  8Ch ; Њ
+.data:10003090 db  67h ; g
+.data:10003091 db 0C3h ; Г
+.data:10003092 db  82h ; ‚
+.data:10003093 db  72h ; r
+.data:10003094 db  4Fh ; O
+.data:10003095 db  85h ; …
+.data:10003096 db  60h ; `
+.data:10003097 db  63h ; c
+.data:10003098 db 0D8h ; Ш
+.data:10003099 db  50h ; P
+.data:1000309A db  7Dh ; }
+.data:1000309B db 0A3h ; Ј
+.data:1000309C db 0BDh ; Ѕ
+.data:1000309D db  51h ; Q
+.data:1000309E db  17h
+.data:1000309F db  27h ; '
+.data:100030A0 db  98h ; 
+.data:100030A1 db  20h
+.data:100030A2 db  20h
+.data:100030A3 db  20h
+.data:100030A4 db  20h
+.data:100030A5 db  20h
+.data:100030A6 db  20h
+.data:100030A7 db  20h
+.data:100030A8 db  20h
+.data:100030A9 db  20h
+.data:100030AA db  20h
+.data:100030AB db  20h
+.data:100030AC db  20h
+.data:100030AD db  20h
+.data:100030AE db  20h
+.data:100030AF db  20h
+.data:100030B0 db  20h
+.data:100030B1 db  20h
+.data:100030B2 db  20h
+.data:100030B3 db  20h
+.data:100030B4 db  20h
+.data:100030B5 db  20h
+.data:100030B6 db  20h
+.data:100030B7 db  20h
+.data:100030B8 db  20h
+.data:100030B9 db  20h
+.data:100030BA db  20h
+.data:100030BB db  20h
+.data:100030BC db  20h
+.data:100030BD db  20h
+.data:100030BE db  20h
+.data:100030BF db  20h
+.data:100030C0 db  20h
+.data:100030C1 db  20h
+.data:100030C2 db  20h
+.data:100030C3 db  20h
+.data:100030C4 db  20h
+.data:100030C5 db  20h
+.data:100030C6 db  20h
+.data:100030C7 db  20h
+.data:100030C8 db  20h
+.data:100030C9 db  20h
+.data:100030CA db  20h
+.data:100030CB db  20h
+.data:100030CC db  20h
+.data:100030CD db  20h
+.data:100030CE db  20h
+.data:100030CF db  20h
+.data:100030D0 db  20h
+.data:100030D1 db  20h
+.data:100030D2 db  20h
+.data:100030D3 db  20h
+.data:100030D4 db  20h
+.data:100030D5 db  20h
+.data:100030D6 db  20h
+.data:100030D7 db  20h
+.data:100030D8 db  20h
+.data:100030D9 db  20h
+.data:100030DA db  20h
+.data:100030DB db  20h
+.data:100030DC db  20h
+.data:100030DD db  20h
+.data:100030DE db  20h
+.data:100030DF db  20h
+.data:100030E0 db  20h
+.data:100030E1 db  20h
+.data:100030E2 db  20h
+.data:100030E3 db  20h
+.data:100030E4 db  20h
+.data:100030E5 db  20h
+.data:100030E6 db  20h
+.data:100030E7 db  20h
+.data:100030E8 db  20h
+.data:100030E9 db  20h
+.data:100030EA db  20h
+.data:100030EB db  20h
+.data:100030EC db  20h
+.data:100030ED db  20h
+.data:100030EE db  20h
+.data:100030EF db  20h
+.data:100030F0 db  20h
+.data:100030F1 db  20h
+.data:100030F2 db  20h
+.data:100030F3 db  20h
+.data:100030F4 db  20h
+.data:100030F5 db  20h
+.data:100030F6 db  20h
+.data:100030F7 db  20h
+.data:100030F8 db  20h
+.data:100030F9 db  20h
+.data:100030FA db  20h
+.data:100030FB db  20h
+.data:100030FC db  20h
+.data:100030FD db  20h
+.data:100030FE db  20h
+.data:100030FF db  20h
+.data:10003100 db  20h
+.data:10003101 db  20h
+.data:10003102 db  20h
+.data:10003103 db  20h
+.data:10003104 db  20h
+.data:10003105 db  20h
+.data:10003106 db  20h
+.data:10003107 db  20h
+.data:10003108 db  20h
+.data:10003109 db  20h
+.data:1000310A db  20h
+.data:1000310B db  20h
+.data:1000310C db  20h
+.data:1000310D db  20h
+.data:1000310E db  20h
+.data:1000310F db  20h
+.data:10003110 db  20h
+.data:10003111 db  20h
+.data:10003112 db  20h
+.data:10003113 db  20h
+.data:10003114 db  20h
+.data:10003115 db  20h
+.data:10003116 db  20h
+.data:10003117 db  20h
+.data:10003118 db  20h
+.data:10003119 db  20h
+.data:1000311A db  20h
+.data:1000311B db  20h
+.data:1000311C db  20h
+.data:1000311D db  20h
+.data:1000311E db  20h
+.data:1000311F db  20h
+.data:10003120 db  20h
+.data:10003121 db  20h
+.data:10003122 db  20h
+.data:10003123 db  20h
+.data:10003124 db  20h
+.data:10003125 db  20h
+.data:10003126 db  20h
+.data:10003127 db  20h
+.data:10003128 db  20h
+.data:10003129 db  20h
+.data:1000312A db  20h
+.data:1000312B db  20h
+.data:1000312C db  20h
+.data:1000312D db  20h
+.data:1000312E db  20h
+.data:1000312F db  20h
+.data:10003130 db  20h
+.data:10003131 db  20h
+.data:10003132 db  20h
+.data:10003133 db  20h
+.data:10003134 db  20h
+.data:10003135 db  20h
+.data:10003136 db  20h
+.data:10003137 db  20h
+.data:10003138 db  20h
+.data:10003139 db  20h
+.data:1000313A db  20h
+.data:1000313B db  20h
+.data:1000313C db  20h
+.data:1000313D db  20h
+.data:1000313E db  20h
+.data:1000313F db  20h
+.data:10003140 db  20h
+.data:10003141 db  20h
+.data:10003142 db  20h
+.data:10003143 db  20h
+.data:10003144 db  20h
+.data:10003145 db  20h
+.data:10003146 db  20h
+.data:10003147 db  20h
+.data:10003148 db  20h
+.data:10003149 db  20h
+.data:1000314A db  20h
+.data:1000314B db  20h
+.data:1000314C db  20h
+.data:1000314D db  20h
+.data:1000314E db  20h
+.data:1000314F db  20h
+.data:10003150 db  20h
+.data:10003151 db  20h
+.data:10003152 db  20h
+.data:10003153 db  20h
+.data:10003154 db  20h
+.data:10003155 db  20h
+.data:10003156 db  20h
+.data:10003157 db  20h
+.data:10003158 db  20h
+.data:10003159 db  20h
+.data:1000315A db  20h
+.data:1000315B db  20h
+.data:1000315C db  20h
+.data:1000315D db  20h
+.data:1000315E db  20h
+.data:1000315F db  20h
+.data:10003160 db  20h
+.data:10003161 db  20h
+.data:10003162 db  20h
+.data:10003163 db  20h
+.data:10003164 db  20h
+.data:10003165 db  20h
+.data:10003166 db  20h
+.data:10003167 db  20h
+.data:10003168 db  20h
+.data:10003169 db  20h
+.data:1000316A db  20h
+.data:1000316B db  20h
+.data:1000316C db  20h
+.data:1000316D db  20h
+.data:1000316E db  20h
+.data:1000316F db  20h
+.data:10003170 db  20h
+.data:10003171 db  20h
+.data:10003172 db  20h
+.data:10003173 db  20h
+.data:10003174 db  20h
+.data:10003175 db  20h
+.data:10003176 db  20h
+.data:10003177 db  20h
+.data:10003178 db  20h
+.data:10003179 db  20h
+.data:1000317A db  20h
+.data:1000317B db  20h
+.data:1000317C db  20h
+.data:1000317D db  20h
+.data:1000317E db  20h
+.data:1000317F db  20h
+.data:10003180 db  20h
+.data:10003181 db  20h
+.data:10003182 db  20h
+.data:10003183 db  20h
+.data:10003184 db  20h
+.data:10003185 db  20h
+.data:10003186 db  20h
+.data:10003187 db  20h
+.data:10003188 db  20h
+.data:10003189 db  20h
+.data:1000318A db  20h
+.data:1000318B db  20h
+.data:1000318C db  20h
+.data:1000318D db  20h
+.data:1000318E db  20h
+.data:1000318F db  20h
+.data:10003190 db  20h
+.data:10003191 db  20h
+.data:10003192 db  20h
+.data:10003193 db  20h
+.data:10003194 db  20h
+.data:10003195 db  20h
+.data:10003196 db  20h
+.data:10003197 db  20h
+.data:10003198 db  20h
+.data:10003199 db  20h
+.data:1000319A db  20h
+.data:1000319B db  20h
+.data:1000319C db  20h
+.data:1000319D db  20h
+.data:1000319E db  20h
+.data:1000319F db  20h
+.data:100031A0 db  20h
+.data:100031A1 db  20h
+.data:100031A2 db  20h
+.data:100031A3 db  20h
+.data:100031A4 db  20h
+.data:100031A5 db  20h
+.data:100031A6 db  20h
+.data:100031A7 db  20h
+.data:100031A8 db  20h
+.data:100031A9 db  20h
+.data:100031AA db  20h
+.data:100031AB db  20h
+.data:100031AC db  20h
+.data:100031AD db  20h
+.data:100031AE db  20h
+.data:100031AF db  20h
+.data:100031B0 db  20h
+.data:100031B1 db  20h
+.data:100031B2 db  20h
+.data:100031B3 db  20h
+.data:100031B4 db  20h
+.data:100031B5 db  20h
+.data:100031B6 db  20h
+.data:100031B7 db  20h
+.data:100031B8 db  20h
+.data:100031B9 db  20h
+.data:100031BA db  20h
+.data:100031BB db  20h
+.data:100031BC db  20h
+.data:100031BD db  20h
+.data:100031BE db  20h
+.data:100031BF db  20h
+.data:100031C0 db  20h
+.data:100031C1 db  20h
+.data:100031C2 db  20h
+.data:100031C3 db  20h
+.data:100031C4 db  20h
+.data:100031C5 db  20h
+.data:100031C6 db  20h
+.data:100031C7 db  20h
+.data:100031C8 db  20h
+.data:100031C9 db  20h
+.data:100031CA db  20h
+.data:100031CB db  20h
+.data:100031CC db  20h
+.data:100031CD db  20h
+.data:100031CE db  20h
+.data:100031CF db  20h
+.data:100031D0 db  20h
+.data:100031D1 db  20h
+.data:100031D2 db  20h
+.data:100031D3 db  20h
+.data:100031D4 db  20h
+.data:100031D5 db  20h
+.data:100031D6 db  20h
+.data:100031D7 db  20h
+.data:100031D8 db  20h
+.data:100031D9 db  20h
+.data:100031DA db  20h
+.data:100031DB db  20h
+.data:100031DC db  20h
+.data:100031DD db  20h
+.data:100031DE db  20h
+.data:100031DF db  20h
+.data:100031E0 db  20h
+.data:100031E1 db  20h
+.data:100031E2 db  20h
+.data:100031E3 db  20h
+.data:100031E4 db  20h
+.data:100031E5 db  20h
+.data:100031E6 db  20h
+.data:100031E7 db  20h
+.data:100031E8 db  20h
+.data:100031E9 db  20h
+.data:100031EA db  20h
+.data:100031EB db  20h
+.data:100031EC db  20h
+.data:100031ED db  20h
+.data:100031EE db  20h
+.data:100031EF db  20h
+.data:100031F0 db  20h
+.data:100031F1 db  20h
+.data:100031F2 db  20h
+.data:100031F3 db  20h
+.data:100031F4 db  20h
+.data:100031F5 db  20h
+.data:100031F6 db  20h
+.data:100031F7 db  20h
+.data:100031F8 db  20h
+.data:100031F9 db  20h
+.data:100031FA db  20h
+.data:100031FB db  20h
+.data:100031FC db  20h
+.data:100031FD db  20h
+.data:100031FE db  20h
+.data:100031FF db  20h
+.data:10003200 db  20h
+.data:10003201 db  20h
+.data:10003202 db  20h
+.data:10003203 db  20h
+.data:10003204 db  20h
+.data:10003205 db  20h
+.data:10003206 db  20h
+.data:10003207 db  20h
+.data:10003208 db  20h
+.data:10003209 db  20h
+.data:1000320A db  20h
+.data:1000320B db  20h
+.data:1000320C db  20h
+.data:1000320D db  20h
+.data:1000320E db  20h
+.data:1000320F db  20h
+.data:10003210 db  20h
+.data:10003211 db  20h
+.data:10003212 db  20h
+.data:10003213 db  20h
+.data:10003214 db  20h
+.data:10003215 db  20h
+.data:10003216 db  20h
+.data:10003217 db  20h
+.data:10003218 db  20h
+.data:10003219 db  20h
+.data:1000321A db  20h
+.data:1000321B db  4Eh ; N
+.data:1000321C db  58h ; X
+.data:1000321D db  41h ; A
+.data:1000321E db  55h ; U
+.data:1000321F db  54h ; T
+.data:10003220 db  48h ; H
+.data:10003221 db  42h ; B
+.data:10003222 db  4Ch ; L
+.data:10003223 db  4Fh ; O
+.data:10003224 db  43h ; C
+.data:10003225 db  4Bh ; K
+.data:10003226 db    0
+.data:10003227 db    0
+.data:10003228 aExtn_rtv_mom_c db 'EXTN_rtv_mom_cp_part_attr',0
+.data:10003242 align 4
+.data:10003244 aUnload db 'UNLOAD',0
+.data:1000324B align 4
+.data:1000324C aPos_reen db 'pos_reen',0
+.data:10003255 align 4
+.data:10003258 aPrev_tool_axis db 'prev_tool_axis',0
+.data:10003267 align 4
+.data:10003268 aPrev_mcs_goto db 'prev_mcs_goto',0
+.data:10003276 align 4
+.data:10003278 unk_10003278 db 0C2h ; В
+.data:10003279 db 0E2h ; в
+.data:1000327A db 0EEh ; о
+.data:1000327B db 0E4h ; д
+.data:1000327C db  20h
+.data:1000327D db 0E4h ; д
+.data:1000327E db 0E8h ; и
+.data:1000327F db 0F1h ; с
+.data:10003280 db 0F2h ; т
+.data:10003281 db 0E0h ; а
+.data:10003282 db 0EDh ; н
+.data:10003283 db 0F6h ; ц
+.data:10003284 db 0E8h ; и
+.data:10003285 db 0E9h ; й
+.data:10003286 db  20h
+.data:10003287 db 0EEh ; о
+.data:10003288 db 0F2h ; т
+.data:10003289 db 0E2h ; в
+.data:1000328A db 0EEh ; о
+.data:1000328B db 0E4h ; д
+.data:1000328C db 0E0h ; а
+.data:1000328D db  20h
+.data:1000328E db 0E8h ; и
+.data:1000328F db  20h
+.data:10003290 db 0E2h ; в
+.data:10003291 db 0F0h ; р
+.data:10003292 db 0E5h ; е
+.data:10003293 db 0E7h ; з
+.data:10003294 db 0E0h ; а
+.data:10003295 db 0EDh ; н
+.data:10003296 db 0E8h ; и
+.data:10003297 db 0FFh
+.data:10003298 db    0
+.data:10003299 db    0
+.data:1000329A db    0
+.data:1000329B db    0
+.data:1000329C aInput_retract_ db 'INPUT_RETRACT_DIST',0
+.data:100032AF align 10h
+.data:100032B0 aKin_reengage_d db 'kin_reengage_distance',0
+.data:100032C6 align 4
+.data:100032C8 aKin_retract_di db 'kin_retract_distance',0
+.data:100032DD align 10h
+.data:100032E0 unk_100032E0 db 0C2h ; В
+.data:100032E1 db 0E2h ; в
+.data:100032E2 db 0E5h ; е
+.data:100032E3 db 0E4h ; д
+.data:100032E4 db 0E8h ; и
+.data:100032E5 db 0F2h ; т
+.data:100032E6 db 0E5h ; е
+.data:100032E7 db  20h
+.data:100032E8 db 0E7h ; з
+.data:100032E9 db 0EDh ; н
+.data:100032EA db 0E0h ; а
+.data:100032EB db 0F7h ; ч
+.data:100032EC db 0E5h ; е
+.data:100032ED db 0EDh ; н
+.data:100032EE db 0E8h ; и
+.data:100032EF db 0FFh
+.data:100032F0 db  20h
+.data:100032F1 db 0EEh ; о
+.data:100032F2 db 0F2h ; т
+.data:100032F3 db 0E2h ; в
+.data:100032F4 db 0EEh ; о
+.data:100032F5 db 0E4h ; д
+.data:100032F6 db 0E0h ; а
+.data:100032F7 db  20h
+.data:100032F8 db 0E8h ; и
+.data:100032F9 db  20h
+.data:100032FA db 0E2h ; в
+.data:100032FB db 0F0h ; р
+.data:100032FC db 0E5h ; е
+.data:100032FD db 0E7h ; з
+.data:100032FE db 0E0h ; а
+.data:100032FF db 0EDh ; н
+.data:10003300 db 0E8h ; и
+.data:10003301 db 0FFh
+.data:10003302 db  20h
+.data:10003303 db 0E8h ; и
+.data:10003304 db 0EDh ; н
+.data:10003305 db 0F1h ; с
+.data:10003306 db 0F2h ; т
+.data:10003307 db 0F0h ; р
+.data:10003308 db 0F3h ; у
+.data:10003309 db 0ECh ; м
+.data:1000330A db 0E5h ; е
+.data:1000330B db 0EDh ; н
+.data:1000330C db 0F2h ; т
+.data:1000330D db 0E0h ; а
+.data:1000330E db    0
+.data:1000330F db    0
+.data:10003310 aInput_retract db 'INPUT_RETRACT',0
+.data:1000331E align 10h
+.data:10003320 aPlane_plus_dmc db 'PLANE_PLUS_DMC',0
+.data:1000332F align 10h
+.data:10003330 ; char aMom_output__10[]
+.data:10003330 aMom_output__10 db 'MOM_output_literal "L A%.3lf FMAX "'
+.data:10003330 db 0
+.data:10003354 aPlane_dmc db 'PLANE_DMC',0
+.data:1000335E align 10h
+.data:10003360 aM128 db	'M128',0
+.data:10003365 align 4
+.data:10003368 ; char aMom_output_l_9[]
+.data:10003368 aMom_output_l_9 db 'MOM_output_literal "M129 "',0
+.data:10003383 align 4
+.data:10003384 ; char aMom_output_l_8[]
+.data:10003384 aMom_output_l_8 db 'MOM_output_literal "L Z%.3lf F MAX '
+.data:10003384 db '"',0
+.data:100033A9 align 4
+.data:100033AC ; char aMom_output_l_7[]
+.data:100033AC aMom_output_l_7 db 'MOM_output_literal "L X%.3lf Y%.3lf'
+.data:100033AC db ' F MAX "',0
+.data:100033D8 ; char aMom_output_l_6[]
+.data:100033D8 aMom_output_l_6 db 'MOM_output_literal "M128 "',0
+.data:100033F3 align 4
+.data:100033F4 aMcs_goto db 'mcs_goto',0
+.data:100033FD align 10h
+.data:10003400 aPlane_moving_m db 'PLANE_moving_M128',0
+.data:10003412 align 4
+.data:10003414 ; char aMom_output_l_5[]
+.data:10003414 aMom_output_l_5 db 'MOM_output_literal "L Z%.3lf F MAX"'
+.data:10003414 db 0
+.data:10003438 ; char aMom_output_l_4[]
+.data:10003438 aMom_output_l_4 db 'MOM_output_literal "L X%.3lf Y%.3lf'
+.data:10003438 db ' F MAX"',0
+.data:10003463 align 4
+.data:10003464 a2 db '2',0
+.data:10003466 align 4
+.data:10003468 aPos db 'pos',0
+.data:1000346C aPlane_moving db	'PLANE_moving',0
+.data:10003479 align 4
+.data:1000347C ; char aMom_output_l_3[]
+.data:1000347C aMom_output_l_3 db 'MOM_output_literal "PLANE SPATIAL S'
+.data:1000347C db 'PA%.3lf SPB+0 SPC+Q31 TURN F5000 SE'
+.data:1000347C db 'Q+ "',0
+.data:100034C7 align 4
+.data:100034C8 aPlane_plus_nov db 'PLANE_PLUS_NOVOMET',0
+.data:100034DB align 4
+.data:100034DC ; char aMom_output_l_2[]
+.data:100034DC aMom_output_l_2 db 'MOM_output_literal "PLANE SPATIAL S'
+.data:100034DC db 'PA-0.001 SPB+0 SPC%.3lf TURN F5000 '
+.data:100034DC db 'SEQ- "',0
+.data:10003529 align 4
+.data:1000352C aPlane_001 db 'PLANE_001',0
+.data:10003536 align 4
+.data:10003538 ; char aMom_output_l_1[]
+.data:10003538 aMom_output_l_1 db 'MOM_output_literal "PLANE SPATIAL S'
+.data:10003538 db 'PA%.3lf SPB+0 SPC+Q31 TURN F5000 SE'
+.data:10003538 db 'Q- "',0
+.data:10003583 align 4
+.data:10003584 ; char aMom_output_l_0[]
+.data:10003584 aMom_output_l_0 db 'MOM_output_literal "FN1: Q31=%.3lf '
+.data:10003584 db '+ +Q30"',0
+.data:100035AF align 10h
+.data:100035B0 aPlane_novomet db 'PLANE_NOVOMET',0
+.data:100035BE align 10h
+.data:100035C0 ; char aMom_output_lit[]
+.data:100035C0 aMom_output_lit db 'MOM_output_literal "PLANE SPATIAL S'
+.data:100035C0 db 'PA%.3lf SPB+0 SPC%.3lf TURN F5000 S'
+.data:100035C0 db 'EQ- "',0
+.data:1000360C a1 db '1',0
+.data:1000360E align 10h
+.data:10003610 aOut_angle_pos db 'out_angle_pos',0
+.data:1000361E align 10h
+.data:10003620 a0 db '0',0
+.data:10003622 align 4
+.data:10003624 aPlane db 'PLANE',0
+.data:1000362A align 4
+.data:1000362C ; char aArg0S[]
+.data:1000362C aArg0S db 'Arg 0 %s',0
+.data:10003635 align 4
+.data:10003638 ; char Format[]
+.data:10003638 Format db 'Number of args %ld',0
+.data:1000364B align 4
+.data:1000364C aAsRasx db 'Внимание!',0
+.data:10003656 align 4
+.data:10003658 unk_10003658 db 0CDh ; Н
+.data:10003659 db 0C0h ; А
+.data:1000365A db  20h
+.data:1000365B db 0DDh ; Э
+.data:1000365C db 0D2h ; Т
+.data:1000365D db 0CEh ; О
+.data:1000365E db 0CCh ; М
+.data:1000365F db  20h
+.data:10003660 db 0D0h ; Р
+.data:10003661 db 0C0h ; А
+.data:10003662 db 0C1h ; Б
+.data:10003663 db 0CEh ; О
+.data:10003664 db 0D7h ; Ч
+.data:10003665 db 0C5h ; Е
+.data:10003666 db 0CCh ; М
+.data:10003667 db  20h
+.data:10003668 db 0CCh ; М
+.data:10003669 db 0C5h ; Е
+.data:1000366A db 0D1h ; С
+.data:1000366B db 0D2h ; Т
+.data:1000366C db 0C5h ; Е
+.data:1000366D db  20h
+.data:1000366E db 0CFh ; П
+.data:1000366F db 0CEh ; О
+.data:10003670 db 0D1h ; С
+.data:10003671 db 0D2h ; Т
+.data:10003672 db 0CFh ; П
+.data:10003673 db 0D0h ; Р
+.data:10003674 db 0CEh ; О
+.data:10003675 db 0D6h ; Ц
+.data:10003676 db 0C5h ; Е
+.data:10003677 db 0D1h ; С
+.data:10003678 db 0D1h ; С
+.data:10003679 db 0CEh ; О
+.data:1000367A db 0D0h ; Р
+.data:1000367B db  20h
+.data:1000367C db 0CDh ; Н
+.data:1000367D db 0C5h ; Е
+.data:1000367E db  20h
+.data:1000367F db 0CCh ; М
+.data:10003680 db 0CEh ; О
+.data:10003681 db 0C6h ; Ж
+.data:10003682 db 0C5h ; Е
+.data:10003683 db 0D2h ; Т
+.data:10003684 db  20h
+.data:10003685 db 0C1h ; Б
+.data:10003686 db 0DBh ; Ы
+.data:10003687 db 0D2h ; Т
+.data:10003688 db 0DCh ; Ь
+.data:10003689 db  20h
+.data:1000368A db 0C7h ; З
+.data:1000368B db 0C0h ; А
+.data:1000368C db 0CFh ; П
+.data:1000368D db 0D3h ; У
+.data:1000368E db 0D9h ; Щ
+.data:1000368F db 0C5h ; Е
+.data:10003690 db 0CDh ; Н
+.data:10003691 db  0Ah
+.data:10003692 db  0Ah
+.data:10003693 db  0Ah
+.data:10003694 db 0CCh ; М
+.data:10003695 db 0EEh ; о
+.data:10003696 db 0F1h ; с
+.data:10003697 db 0EAh ; к
+.data:10003698 db 0E2h ; в
+.data:10003699 db 0E0h ; а
+.data:1000369A db  2Ch ; ,
+.data:1000369B db  20h
+.data:1000369C db  43h ; C
+.data:1000369D db  53h ; S
+.data:1000369E db  6Fh ; o
+.data:1000369F db  66h ; f
+.data:100036A0 db  74h ; t
+.data:100036A1 db  20h
+.data:100036A2 db  28h ; (
+.data:100036A3 db 0C7h ; З
+.data:100036A4 db 0C0h ; А
+.data:100036A5 db 0CEh ; О
+.data:100036A6 db  20h
+.data:100036A7 db  22h ; "
+.data:100036A8 db 0D1h ; С
+.data:100036A9 db 0E8h ; и
+.data:100036AA db 0D1h ; С
+.data:100036AB db 0EEh ; о
+.data:100036AC db 0F4h ; ф
+.data:100036AD db 0F2h ; т
+.data:100036AE db  22h ; "
+.data:100036AF db  29h ; )
+.data:100036B0 db  2Ch ; ,
+.data:100036B1 db  0Ah
+.data:100036B2 db 0D2h ; Т
+.data:100036B3 db 0E5h ; е
+.data:100036B4 db 0EBh ; л
+.data:100036B5 db 0E5h ; е
+.data:100036B6 db 0F4h ; ф
+.data:100036B7 db 0EEh ; о
+.data:100036B8 db 0EDh ; н
+.data:100036B9 db  3Ah ; :
+.data:100036BA db  20h
+.data:100036BB db  2Bh ; +
+.data:100036BC db  37h ; 7
+.data:100036BD db  20h
+.data:100036BE db  28h ; (
+.data:100036BF db  34h ; 4
+.data:100036C0 db  39h ; 9
+.data:100036C1 db  35h ; 5
+.data:100036C2 db  29h ; )
+.data:100036C3 db  20h
+.data:100036C4 db  39h ; 9
+.data:100036C5 db  31h ; 1
+.data:100036C6 db  33h ; 3
+.data:100036C7 db  2Dh ; -
+.data:100036C8 db  32h ; 2
+.data:100036C9 db  32h ; 2
+.data:100036CA db  2Dh ; -
+.data:100036CB db  32h ; 2
+.data:100036CC db  32h ; 2
+.data:100036CD db  2Ch ; ,
+.data:100036CE db  20h
+.data:100036CF db 0D4h ; Ф
+.data:100036D0 db 0E0h ; а
+.data:100036D1 db 0EAh ; к
+.data:100036D2 db 0F1h ; с
+.data:100036D3 db  3Ah ; :
+.data:100036D4 db  20h
+.data:100036D5 db  2Bh ; +
+.data:100036D6 db  37h ; 7
+.data:100036D7 db  20h
+.data:100036D8 db  28h ; (
+.data:100036D9 db  34h ; 4
+.data:100036DA db  39h ; 9
+.data:100036DB db  35h ; 5
+.data:100036DC db  29h ; )
+.data:100036DD db  20h
+.data:100036DE db  39h ; 9
+.data:100036DF db  31h ; 1
+.data:100036E0 db  33h ; 3
+.data:100036E1 db  2Dh ; -
+.data:100036E2 db  32h ; 2
+.data:100036E3 db  32h ; 2
+.data:100036E4 db  2Dh ; -
+.data:100036E5 db  32h ; 2
+.data:100036E6 db  31h ; 1
+.data:100036E7 db  0Ah
+.data:100036E8 db  65h ; e
+.data:100036E9 db  2Dh ; -
+.data:100036EA db  6Dh ; m
+.data:100036EB db  61h ; a
+.data:100036EC db  69h ; i
+.data:100036ED db  6Ch ; l
+.data:100036EE db  3Ah ; :
+.data:100036EF db  20h
+.data:100036F0 db  6Ah ; j
+.data:100036F1 db  75h ; u
+.data:100036F2 db  72h ; r
+.data:100036F3 db  61h ; a
+.data:100036F4 db  40h ; @
+.data:100036F5 db  63h ; c
+.data:100036F6 db  73h ; s
+.data:100036F7 db  6Fh ; o
+.data:100036F8 db  66h ; f
+.data:100036F9 db  74h ; t
+.data:100036FA db  2Eh ; .
+.data:100036FB db  72h ; r
+.data:100036FC db  75h ; u
+.data:100036FD db  2Ch ; ,
+.data:100036FE db  20h
+.data:100036FF db  67h ; g
+.data:10003700 db  30h ; 0
+.data:10003701 db  30h ; 0
+.data:10003702 db  40h ; @
+.data:10003703 db  69h ; i
+.data:10003704 db  6Eh ; n
+.data:10003705 db  62h ; b
+.data:10003706 db  6Fh ; o
+.data:10003707 db  78h ; x
+.data:10003708 db  2Eh ; .
+.data:10003709 db  72h ; r
+.data:1000370A db  75h ; u
+.data:1000370B db  20h
+.data:1000370C db  0Ah
+.data:1000370D db  48h ; H
+.data:1000370E db  54h ; T
+.data:1000370F db  54h ; T
+.data:10003710 db  50h ; P
+.data:10003711 db  3Ah ; :
+.data:10003712 db  20h
+.data:10003713 db  68h ; h
+.data:10003714 db  74h ; t
+.data:10003715 db  74h ; t
+.data:10003716 db  70h ; p
+.data:10003717 db  3Ah ; :
+.data:10003718 db  2Fh ; /
+.data:10003719 db  2Fh ; /
+.data:1000371A db  77h ; w
+.data:1000371B db  77h ; w
+.data:1000371C db  77h ; w
+.data:1000371D db  2Eh ; .
+.data:1000371E db  63h ; c
+.data:1000371F db  73h ; s
+.data:10003720 db  6Fh ; o
+.data:10003721 db  66h ; f
+.data:10003722 db  74h ; t
+.data:10003723 db  2Eh ; .
+.data:10003724 db  72h ; r
+.data:10003725 db  75h ; u
+.data:10003726 db  0Ah
+.data:10003727 db  0Ah
+.data:10003728 db  28h ; (
+.data:10003729 db  63h ; c
+.data:1000372A db  29h ; )
+.data:1000372B db  20h
+.data:1000372C db  32h ; 2
+.data:1000372D db  30h ; 0
+.data:1000372E db  30h ; 0
+.data:1000372F db  37h ; 7
+.data:10003730 db  2Eh ; .
+.data:10003731 db  0Ah
+.data:10003732 db  0Ah
+.data:10003733 db  0Ah
+.data:10003734 db 0CFh ; П
+.data:10003735 db 0EEh ; о
+.data:10003736 db 0F1h ; с
+.data:10003737 db 0EBh ; л
+.data:10003738 db 0E5h ; е
+.data:10003739 db 0E4h ; д
+.data:1000373A db 0EDh ; н
+.data:1000373B db 0FFh
+.data:1000373C db 0FFh
+.data:1000373D db  20h
+.data:1000373E db 0F0h ; р
+.data:1000373F db 0E5h ; е
+.data:10003740 db 0E4h ; д
+.data:10003741 db 0E0h ; а
+.data:10003742 db 0EAh ; к
+.data:10003743 db 0F6h ; ц
+.data:10003744 db 0E8h ; и
+.data:10003745 db 0FFh
+.data:10003746 db  20h
+.data:10003747 db 0E0h ; а
+.data:10003748 db 0EFh ; п
+.data:10003749 db 0F0h ; р
+.data:1000374A db 0E5h ; е
+.data:1000374B db 0EBh ; л
+.data:1000374C db 0FCh ; ь
+.data:1000374D db  20h
+.data:1000374E db  32h ; 2
+.data:1000374F db  30h ; 0
+.data:10003750 db  30h ; 0
+.data:10003751 db  38h ; 8
+.data:10003752 db    0
+.data:10003753 db    0
+.data:10003754 dword_10003754 dd 0E7E5F0C2h
+.data:10003758 dword_10003758 dd 0E5E8EDE0h
+.data:1000375C byte_1000375C db	0
+.data:1000375D align 10h
+.data:10003760 dword_10003760 dd 0EEE2F2CEh
+.data:10003764 word_10003764 dw	0E4h
+.data:10003766 align 4
+.data:10003768 unk_10003768 db 0D1h ; С
+.data:10003769 db 0E8h ; и
+.data:1000376A db 0F1h ; с
+.data:1000376B db 0F2h ; т
+.data:1000376C db 0E5h ; е
+.data:1000376D db 0ECh ; м
+.data:1000376E db 0EDh ; н
+.data:1000376F db 0EEh ; о
+.data:10003770 db 0E5h ; е
+.data:10003771 db  20h
+.data:10003772 db 0E2h ; в
+.data:10003773 db 0F0h ; р
+.data:10003774 db 0E5h ; е
+.data:10003775 db 0ECh ; м
+.data:10003776 db 0FFh
+.data:10003777 db  20h
+.data:10003778 db 0EDh ; н
+.data:10003779 db 0E0h ; а
+.data:1000377A db  20h
+.data:1000377B db 0F0h ; р
+.data:1000377C db 0E0h ; а
+.data:1000377D db 0E1h ; б
+.data:1000377E db 0EEh ; о
+.data:1000377F db 0F7h ; ч
+.data:10003780 db 0E5h ; е
+.data:10003781 db 0E9h ; й
+.data:10003782 db  20h
+.data:10003783 db 0F1h ; с
+.data:10003784 db 0F2h ; т
+.data:10003785 db 0E0h ; а
+.data:10003786 db 0EDh ; н
+.data:10003787 db 0F6h ; ц
+.data:10003788 db 0E8h ; и
+.data:10003789 db 0E8h ; и
+.data:1000378A db  20h
+.data:1000378B db 0E1h ; б
+.data:1000378C db 0FBh ; ы
+.data:1000378D db 0EBh ; л
+.data:1000378E db 0EEh ; о
+.data:1000378F db  20h
+.data:10003790 db  22h ; "
+.data:10003791 db 0EFh ; п
+.data:10003792 db 0E5h ; е
+.data:10003793 db 0F0h ; р
+.data:10003794 db 0E5h ; е
+.data:10003795 db 0ECh ; м
+.data:10003796 db 0EEh ; о
+.data:10003797 db 0F2h ; т
+.data:10003798 db 0E0h ; а
+.data:10003799 db 0EDh ; н
+.data:1000379A db 0EEh ; о
+.data:1000379B db  22h ; "
+.data:1000379C db  20h
+.data:1000379D db 0EDh ; н
+.data:1000379E db 0E0h ; а
+.data:1000379F db 0E7h ; з
+.data:100037A0 db 0E0h ; а
+.data:100037A1 db 0E4h ; д
+.data:100037A2 db  21h ; !
+.data:100037A3 db    0
+.data:100037A4 aCsoft2011 db 'CSOFT 2011',0
+.data:100037AF align 10h
+.data:100037B0 aWww_csoft_ru db	'www.csoft.ru',0
+.data:100037BD db    0
+.data:100037BE db    0
+.data:100037BF db    0
+.data:100037C0 db    0
+.data:100037C1 db    0
+.data:100037C2 db    0
+.data:100037C3 db    0
+.data:100037C4 dword_100037C4 dd 0
+.data:100037C8 dword_100037C8 dd 0
+.data:100037CC dword_100037CC dd 0
+.data:100037D0 dword_100037D0 dd 0
+.data:100037D4 ; void *Memory
+.data:100037D4 Memory dd 0
+.data:100037D8 dword_100037D8 dd 0
+.data:100037DC align 1000h
+.data:100037DC _data ends
+.data:100037DC
+.data:100037DC
+.data:100037DC end DllEntryPoint
